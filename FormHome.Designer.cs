@@ -1,6 +1,6 @@
 ﻿namespace PROJEK_AKHIR
 {
-    partial class Form2
+    partial class FormHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormHome
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Fitur_Home__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(718, 511);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormHome";
+            this.Text = "FormHome";
+            this.Load += new System.EventHandler(this.FormHome_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
