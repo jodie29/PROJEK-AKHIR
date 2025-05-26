@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Npgsql;
 using System.Text.RegularExpressions; 
 
-namespace PROJEK_AKHIR //wkwkwkwk
+namespace PROJEK_AKHIR 
 {
     public partial class FromLogin : Form
     {
