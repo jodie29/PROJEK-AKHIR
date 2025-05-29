@@ -165,6 +165,6 @@ namespace PROJEK_AKHIR
         private void FormRegister_Load(object sender, EventArgs e)
         {
 
-/        }
+        }
     }
 }
