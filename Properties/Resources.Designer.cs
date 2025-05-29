@@ -63,6 +63,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adminbttn {
+            get {
+                object obj = ResourceManager.GetObject("Adminbttn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fitur_Home {
             get {
                 object obj = ResourceManager.GetObject("Fitur Home", resourceCulture);
@@ -86,6 +96,36 @@ namespace PROJEK_AKHIR.Properties {
         internal static System.Drawing.Bitmap Fitur_Home1 {
             get {
                 object obj = ResourceManager.GetObject("Fitur Home1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap From_Admin {
+            get {
+                object obj = ResourceManager.GetObject("From Admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kelompok_Tani {
+            get {
+                object obj = ResourceManager.GetObject("Kelompok Tani", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kelompok_Tanibttn {
+            get {
+                object obj = ResourceManager.GetObject("Kelompok Tanibttn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

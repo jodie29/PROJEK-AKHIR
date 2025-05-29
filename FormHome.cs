@@ -23,5 +23,19 @@ namespace PROJEK_AKHIR
         {
            
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            formKelomppokTani.Show();
+        }
     }
 }
