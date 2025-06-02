@@ -113,6 +113,18 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInformasiAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformasiAlat.Designer.cs">
+      <DependentUpon>FormInformasiAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKelompokTaniEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKelompokTaniEdit.Designer.cs">
+      <DependentUpon>FormKelompokTaniEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKelomppokTani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformasiAlat.resx">
+      <DependentUpon>FormInformasiAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKelompokTaniEdit.resx">
+      <DependentUpon>FormKelompokTaniEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKelomppokTani.resx">
       <DependentUpon>FormKelomppokTani.cs</DependentUpon>
@@ -201,6 +219,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kelompok Tanibttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Hapus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoAlatbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laporanbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peminjamanbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengembalianbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riwayatbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Outbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Informasi Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Tambah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Informasi Alat1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,128 +1,137 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PROJEK_AKHIR
 {
-
     public partial class FormAdmin : Form
     {
+        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+
         public FormAdmin()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        void KondisiAwal()
         {
-
+            LblTanggal.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
 
-        private static NpgsqlConnection GetConnection()
-        {
-            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN"; // Pastikan koneksi string ini 100% akurat.
-            return new NpgsqlConnection(connStr);
-        }
-
-        private void LoadData()
+        private void TampilkanAdmin()
         {
             try
             {
-                string query = "SELECT id_admin, nama_admin, email, no_hp_admin, username, password FROM admin"; // Pastikan nama kolom dan tabel cocok dengan database.
+                string query = "SELECT id_admin, nama_admin, email, no_hp_admin, username, password FROM admin";
 
-                using (var conn = GetConnection())
+                using (var conn = new NpgsqlConnection(connectionString))
                 {
                     conn.Open();
-                    NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-                    NpgsqlDataReader reader = cmd.ExecuteReader();
-
+                    NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(query, conn);
                     DataTable dataTable = new DataTable();
-                    dataTable.Load(reader); // Letakkan breakpoint di sini untuk memeriksa dataTable.Rows.Count.
+                    dataAdapter.Fill(dataTable);
 
                     dataGridView1.DataSource = dataTable;
-                    if (dataGridView1.Columns.Contains("id_admin"))
-                        dataGridView1.Columns["id_admin"].Visible = false;
+
+                    dataGridView1.Columns["id_admin"].HeaderText = "Kode";
+                    dataGridView1.Columns["nama_admin"].HeaderText = "Nama";
+                    dataGridView1.Columns["email"].HeaderText = "Email";
+                    dataGridView1.Columns["no_hp_admin"].HeaderText = "Nomor Hp";
+                    dataGridView1.Columns["username"].HeaderText = "Username";
+                    dataGridView1.Columns["password"].HeaderText = "Password";
+                    dataGridView1.Columns[1].Width = 200;
 
                     conn.Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saat memuat data dari database: " + ex.Message, "Kesalahan Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Terjadi kesalahan saat mengambil data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void AddDeleteButtonColumn()
+        private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-            if (!dataGridView1.Columns.Contains("Actions"))
-            {
-                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
-                buttonColumn.HeaderText = "Actions";
-                buttonColumn.Name = "Actions";
-                buttonColumn.Text = "Delete";
-                buttonColumn.UseColumnTextForButtonValue = true;
-                dataGridView1.Columns.Add(buttonColumn);
-            }
+            KondisiAwal();
+            TampilkanAdmin();
         }
 
-        private void FormAdmin_Load(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            AddDeleteButtonColumn();
-            LoadData();
+            LblJam.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void DeleteAdmin(object id)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM admin WHERE id_admin = @id";
-
             try
             {
-                using (var conn = GetConnection())
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    conn.Open();
-                    using (var cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                    var selectedRow = dataGridView1.SelectedRows[0];
+                    var idAdminValue = selectedRow.Cells["id_admin"].Value.ToString();
 
-                        if (rowsAffected > 0)
+                    if (!string.IsNullOrEmpty(idAdminValue) && idAdminValue.StartsWith("adm"))
+                    {
+                        string idAdminStr = idAdminValue.Substring(3);  
+                        if (int.TryParse(idAdminStr, out int idAdmin))
                         {
-                            MessageBox.Show("Admin berhasil dihapus.");
+                            string deleteQuery = "DELETE FROM admin WHERE id_admin = @id_admin";
+
+                            using (var conn = new NpgsqlConnection(connectionString))
+                            {
+                                conn.Open();
+                                using (var cmd = new NpgsqlCommand(deleteQuery, conn))
+                                {
+                                    cmd.Parameters.AddWithValue("@id_admin", idAdminValue);  
+                                    cmd.ExecuteNonQuery();
+                                }
+                                conn.Close();
+                            }
+
+                            TampilkanAdmin();
+                            MessageBox.Show("Data berhasil dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Gagal menghapus admin. Mungkin ID tidak ditemukan di database.");
+                            MessageBox.Show("ID Admin tidak valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    conn.Close();
+                    else
+                    {
+                        MessageBox.Show("ID Admin tidak sesuai format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Silakan pilih baris yang ingin dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saat menghapus admin: " + ex.Message, "Kesalahan Penghapusan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void KelompokTani_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0 &&
-                dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                dataGridView1.Columns[e.ColumnIndex].Name == "Actions")
-            {
-                var id = dataGridView1.Rows[e.RowIndex].Cells["id_admin"].Value; // Pastikan kolom "id_admin" ada dan benar di DataGridView.
+            this.Hide();
+            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            formKelomppokTani.Show();
+        }
 
-                if (id != null)
-                {
-                    DeleteAdmin(id);
-                    LoadData();
-                }
-            }
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
     }
 }
