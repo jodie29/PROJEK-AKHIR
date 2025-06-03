@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             this.bttnAAdmin = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnInformasiAlat = new System.Windows.Forms.Button();
+            this.btnKelompokTani = new System.Windows.Forms.Button();
+            this.btnLaporan = new System.Windows.Forms.Button();
+            this.btnPeminjaman = new System.Windows.Forms.Button();
+            this.btnPengembalian = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bttnAAdmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // bttnAAdmin
@@ -57,123 +49,118 @@
             this.bttnAAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bttnAAdmin.TabIndex = 0;
             this.bttnAAdmin.TabStop = false;
-            this.bttnAAdmin.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Kelompok_Tanibttn;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(294, 354);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.InfoAlatbttn;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(294, 462);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Laporanbttn;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(294, 569);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjamanbttn;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(654, 246);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Pengembalianbttn;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(654, 354);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Riwayatbttn;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(654, 462);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Log_Outbttn;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(654, 567);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(339, 102);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(608, 170);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(299, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 47);
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Adminbttn;
+            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Location = new System.Drawing.Point(294, 244);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(355, 106);
+            this.btnAdmin.TabIndex = 9;
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // btnInformasiAlat
+            // 
+            this.btnInformasiAlat.BackColor = System.Drawing.Color.Transparent;
+            this.btnInformasiAlat.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.InfoAlatbttn;
+            this.btnInformasiAlat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInformasiAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformasiAlat.Location = new System.Drawing.Point(294, 459);
+            this.btnInformasiAlat.Name = "btnInformasiAlat";
+            this.btnInformasiAlat.Size = new System.Drawing.Size(355, 106);
+            this.btnInformasiAlat.TabIndex = 10;
+            this.btnInformasiAlat.UseVisualStyleBackColor = false;
+            this.btnInformasiAlat.Click += new System.EventHandler(this.btnInformasiAlat_Click);
+            // 
+            // btnKelompokTani
+            // 
+            this.btnKelompokTani.BackColor = System.Drawing.Color.Transparent;
+            this.btnKelompokTani.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Kelompok_Tanibttn;
+            this.btnKelompokTani.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnKelompokTani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelompokTani.Location = new System.Drawing.Point(294, 351);
+            this.btnKelompokTani.Name = "btnKelompokTani";
+            this.btnKelompokTani.Size = new System.Drawing.Size(355, 106);
+            this.btnKelompokTani.TabIndex = 11;
+            this.btnKelompokTani.UseVisualStyleBackColor = false;
+            this.btnKelompokTani.Click += new System.EventHandler(this.btnKelompokTani_Click);
+            // 
+            // btnLaporan
+            // 
+            this.btnLaporan.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Laporanbttn;
+            this.btnLaporan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaporan.Location = new System.Drawing.Point(294, 566);
+            this.btnLaporan.Name = "btnLaporan";
+            this.btnLaporan.Size = new System.Drawing.Size(355, 100);
+            this.btnLaporan.TabIndex = 12;
+            this.btnLaporan.UseVisualStyleBackColor = true;
+            // 
+            // btnPeminjaman
+            // 
+            this.btnPeminjaman.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeminjaman.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjamanbttn;
+            this.btnPeminjaman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeminjaman.Location = new System.Drawing.Point(653, 244);
+            this.btnPeminjaman.Name = "btnPeminjaman";
+            this.btnPeminjaman.Size = new System.Drawing.Size(355, 106);
+            this.btnPeminjaman.TabIndex = 13;
+            this.btnPeminjaman.UseVisualStyleBackColor = false;
+            // 
+            // btnPengembalian
+            // 
+            this.btnPengembalian.BackColor = System.Drawing.Color.Transparent;
+            this.btnPengembalian.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Pengembalianbttn;
+            this.btnPengembalian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPengembalian.Location = new System.Drawing.Point(653, 351);
+            this.btnPengembalian.Name = "btnPengembalian";
+            this.btnPengembalian.Size = new System.Drawing.Size(355, 106);
+            this.btnPengembalian.TabIndex = 14;
+            this.btnPengembalian.UseVisualStyleBackColor = false;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Fitur_Home__1_;
+            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Fitur_Home5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
+            this.Controls.Add(this.btnPengembalian);
+            this.Controls.Add(this.btnPeminjaman);
+            this.Controls.Add(this.btnLaporan);
+            this.Controls.Add(this.btnKelompokTani);
+            this.Controls.Add(this.btnInformasiAlat);
+            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.bttnAAdmin);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
             this.Load += new System.EventHandler(this.FormHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bttnAAdmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,13 +169,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox bttnAAdmin;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnInformasiAlat;
+        private System.Windows.Forms.Button btnKelompokTani;
+        private System.Windows.Forms.Button btnLaporan;
+        private System.Windows.Forms.Button btnPeminjaman;
+        private System.Windows.Forms.Button btnPengembalian;
     }
 }

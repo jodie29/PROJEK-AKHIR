@@ -153,6 +153,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fitur_Home5 {
+            get {
+                object obj = ResourceManager.GetObject("Fitur Home5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fitur_Informasi_Alat {
             get {
                 object obj = ResourceManager.GetObject("Fitur Informasi Alat", resourceCulture);

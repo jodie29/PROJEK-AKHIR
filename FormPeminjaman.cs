@@ -16,5 +16,10 @@ namespace PROJEK_AKHIR
         {
             InitializeComponent();
         }
+
+        private void FormPeminjaman_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

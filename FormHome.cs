@@ -21,7 +21,7 @@ namespace PROJEK_AKHIR
             _loggedInAdminId = string.Empty;
         }
 
-        
+
         private void FormHome_Load(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(_loggedInAdminId))
@@ -42,8 +42,8 @@ namespace PROJEK_AKHIR
                         {
                             if (reader.Read())
                             {
-                                string namaAdmin = reader["nama_admin"].ToString();
-                                label1.Text = namaAdmin ;
+                                string namaAdmin = reader["nama_admin"].ToString();  // Corrected here
+                                label1.Text = $"Helo, welcome {namaAdmin}";  // Corrected here
                             }
                         }
                     }
@@ -55,30 +55,32 @@ namespace PROJEK_AKHIR
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+            
+        
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormAdmin formAdmin = new FormAdmin();
             formAdmin.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
-            formKelomppokTani.Show();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
             formInformasiAlat.Show();
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void btnKelompokTani_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            formKelomppokTani.Show();
         }
     }
 }

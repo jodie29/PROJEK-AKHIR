@@ -89,7 +89,7 @@ namespace PROJEK_AKHIR
                     }
                     else
                     {
-                        MessageBox.Show("U atau password salah", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Username atau password salah", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

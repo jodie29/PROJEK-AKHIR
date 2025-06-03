@@ -40,54 +40,60 @@
             // 
             this.tbnama.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbnama.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbnama.Location = new System.Drawing.Point(37, 153);
+            this.tbnama.Location = new System.Drawing.Point(56, 235);
+            this.tbnama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbnama.Name = "tbnama";
-            this.tbnama.Size = new System.Drawing.Size(199, 13);
+            this.tbnama.Size = new System.Drawing.Size(298, 19);
             this.tbnama.TabIndex = 13;
             // 
             // tbemail
             // 
             this.tbemail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbemail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbemail.Location = new System.Drawing.Point(37, 196);
+            this.tbemail.Location = new System.Drawing.Point(56, 302);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(199, 13);
+            this.tbemail.Size = new System.Drawing.Size(298, 19);
             this.tbemail.TabIndex = 14;
             // 
             // tbnohp
             // 
             this.tbnohp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbnohp.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbnohp.Location = new System.Drawing.Point(37, 240);
+            this.tbnohp.Location = new System.Drawing.Point(56, 369);
+            this.tbnohp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbnohp.Name = "tbnohp";
-            this.tbnohp.Size = new System.Drawing.Size(199, 13);
+            this.tbnohp.Size = new System.Drawing.Size(298, 19);
             this.tbnohp.TabIndex = 15;
             // 
             // tbusername
             // 
             this.tbusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbusername.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbusername.Location = new System.Drawing.Point(37, 286);
+            this.tbusername.Location = new System.Drawing.Point(56, 440);
+            this.tbusername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbusername.Name = "tbusername";
-            this.tbusername.Size = new System.Drawing.Size(199, 13);
+            this.tbusername.Size = new System.Drawing.Size(298, 19);
             this.tbusername.TabIndex = 16;
             // 
             // tbpw
             // 
             this.tbpw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbpw.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbpw.Location = new System.Drawing.Point(37, 329);
+            this.tbpw.Location = new System.Drawing.Point(56, 506);
+            this.tbpw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbpw.Name = "tbpw";
-            this.tbpw.Size = new System.Drawing.Size(199, 13);
+            this.tbpw.Size = new System.Drawing.Size(298, 19);
             this.tbpw.TabIndex = 17;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(28, 366);
+            this.button1.Location = new System.Drawing.Point(42, 563);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 28);
+            this.button1.Size = new System.Drawing.Size(333, 43);
             this.button1.TabIndex = 18;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
@@ -95,11 +101,11 @@
             // 
             // FormRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Register;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(718, 511);
+            this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbpw);
             this.Controls.Add(this.tbusername);
@@ -108,7 +114,9 @@
             this.Controls.Add(this.tbnama);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
             this.Load += new System.EventHandler(this.FormRegister_Load);
             this.ResumeLayout(false);

@@ -169,6 +169,34 @@ namespace PROJEK_AKHIR
         {
             LoadDataFromDatabase();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
+        }
+
+        private void btnKelompokTani_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
+        }
     }
 
     public class Alat

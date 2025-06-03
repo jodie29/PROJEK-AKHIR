@@ -351,21 +351,28 @@ namespace PROJEK_AKHIR
             comboBox3.Enabled = true;
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
-            formKelomppokTani.Show();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
 
-        private void Admin_Click(object sender, EventArgs e)
+        private void btnAdmin_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormAdmin formAdmin = new FormAdmin();
             formAdmin.Show();
         }
 
-        private void Home_Click(object sender, EventArgs e)
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
+            formInformasiAlat.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormHome formHome = new FormHome();

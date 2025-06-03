@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Fitur Home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fitur Home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Peminjamanbttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Peminjamanbttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +139,8 @@
   <data name="Kelompok Tani" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kelompok Tani.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Adminbttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adminbttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tambah Alat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tambah Alat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,9 +159,6 @@
   </data>
   <data name="Log Outbttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Log Outbttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="From Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\From Admin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,20 +181,26 @@
   <data name="Riwayatbttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Riwayatbttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Kelompok Tanibttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kelompok Tanibttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Peminjaman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Peminjaman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fitur Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fitur Admin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bttn Tambah 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bttn Tambah 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kelompok Tanibttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kelompok Tanibttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="From Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\From Admin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Informasi Alat Tambah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Informasi Alat Tambah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fitur Home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fitur Home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bttn Tambah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bttn Tambah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,13 +208,13 @@
   <data name="Tambah Informasi Alat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tambah Informasi Alat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Peminjaman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Peminjaman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Adminbttn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adminbttn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fitur Informasi Alat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fitur Informasi Alat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tambah Alat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tambah Alat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fitur Home5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fitur Home5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -34,15 +34,7 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.LblTanggal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.KelompokTani = new System.Windows.Forms.Label();
             this.Admin = new System.Windows.Forms.Label();
-            this.Home = new System.Windows.Forms.Label();
-            this.InformasiAlat = new System.Windows.Forms.Label();
-            this.Exit = new System.Windows.Forms.Label();
-            this.Laporan = new System.Windows.Forms.Label();
-            this.Riwayat = new System.Windows.Forms.Label();
-            this.Pengembalian = new System.Windows.Forms.Label();
-            this.Peminjaman = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,6 +52,15 @@
             this.BttnTambah = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnKelompokTani = new System.Windows.Forms.Button();
+            this.btnPeminjaman = new System.Windows.Forms.Button();
+            this.btnInformasiAlat = new System.Windows.Forms.Button();
+            this.btnPengembalian = new System.Windows.Forms.Button();
+            this.btnRiwayat = new System.Windows.Forms.Button();
+            this.btnLaporan = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,109 +113,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(768, 231);
             this.dataGridView1.TabIndex = 46;
             // 
-            // KelompokTani
-            // 
-            this.KelompokTani.AutoSize = true;
-            this.KelompokTani.BackColor = System.Drawing.Color.Transparent;
-            this.KelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KelompokTani.Location = new System.Drawing.Point(44, 208);
-            this.KelompokTani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.KelompokTani.Name = "KelompokTani";
-            this.KelompokTani.Size = new System.Drawing.Size(143, 22);
-            this.KelompokTani.TabIndex = 45;
-            this.KelompokTani.Text = "Kelompok Tani";
-            // 
             // Admin
             // 
             this.Admin.AutoSize = true;
             this.Admin.BackColor = System.Drawing.SystemColors.Control;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(44, 177);
+            this.Admin.Location = new System.Drawing.Point(45, 184);
             this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(60, 22);
+            this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 44;
-            this.Admin.Text = "Admin";
-            this.Admin.Click += new System.EventHandler(this.Admin_Click);
-            // 
-            // Home
-            // 
-            this.Home.AutoSize = true;
-            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(44, 143);
-            this.Home.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(57, 22);
-            this.Home.TabIndex = 43;
-            this.Home.Text = "Home";
-            this.Home.Click += new System.EventHandler(this.Home_Click);
-            // 
-            // InformasiAlat
-            // 
-            this.InformasiAlat.AutoSize = true;
-            this.InformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InformasiAlat.Location = new System.Drawing.Point(44, 240);
-            this.InformasiAlat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.InformasiAlat.Name = "InformasiAlat";
-            this.InformasiAlat.Size = new System.Drawing.Size(118, 22);
-            this.InformasiAlat.TabIndex = 42;
-            this.InformasiAlat.Text = "Informasi Alat";
-            // 
-            // Exit
-            // 
-            this.Exit.AutoSize = true;
-            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.Exit.Location = new System.Drawing.Point(44, 419);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(40, 22);
-            this.Exit.TabIndex = 41;
-            this.Exit.Text = "Exit";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Laporan
-            // 
-            this.Laporan.AutoSize = true;
-            this.Laporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Laporan.Location = new System.Drawing.Point(44, 383);
-            this.Laporan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Laporan.Name = "Laporan";
-            this.Laporan.Size = new System.Drawing.Size(76, 22);
-            this.Laporan.TabIndex = 40;
-            this.Laporan.Text = "Laporan";
-            // 
-            // Riwayat
-            // 
-            this.Riwayat.AutoSize = true;
-            this.Riwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Riwayat.Location = new System.Drawing.Point(44, 347);
-            this.Riwayat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Riwayat.Name = "Riwayat";
-            this.Riwayat.Size = new System.Drawing.Size(74, 22);
-            this.Riwayat.TabIndex = 39;
-            this.Riwayat.Text = "Riwayat";
-            // 
-            // Pengembalian
-            // 
-            this.Pengembalian.AutoSize = true;
-            this.Pengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pengembalian.Location = new System.Drawing.Point(44, 313);
-            this.Pengembalian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Pengembalian.Name = "Pengembalian";
-            this.Pengembalian.Size = new System.Drawing.Size(124, 22);
-            this.Pengembalian.TabIndex = 38;
-            this.Pengembalian.Text = "Pengembalian";
-            // 
-            // Peminjaman
-            // 
-            this.Peminjaman.AutoSize = true;
-            this.Peminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Peminjaman.Location = new System.Drawing.Point(44, 276);
-            this.Peminjaman.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Peminjaman.Name = "Peminjaman";
-            this.Peminjaman.Size = new System.Drawing.Size(108, 22);
-            this.Peminjaman.TabIndex = 37;
-            this.Peminjaman.Text = "Peminjaman";
             // 
             // label3
             // 
@@ -224,9 +132,9 @@
             this.label3.Location = new System.Drawing.Point(297, 503);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 20);
+            this.label3.Size = new System.Drawing.Size(204, 20);
             this.label3.TabIndex = 51;
-            this.label3.Text = "Jumlah Kelompok Tani :";
+            this.label3.Text = "Jumlah Anggota              :";
             // 
             // label4
             // 
@@ -248,9 +156,9 @@
             this.label5.Location = new System.Drawing.Point(297, 426);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 20);
+            this.label5.Size = new System.Drawing.Size(203, 20);
             this.label5.TabIndex = 53;
-            this.label5.Text = "Nama Kelompok Tani   :";
+            this.label5.Text = "Nama Kelompok Tani      :";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -400,6 +308,136 @@
             this.label8.TabIndex = 66;
             this.label8.Text = "Deskripsi Jalan   :";
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHome.Location = new System.Drawing.Point(25, 138);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(178, 36);
+            this.btnHome.TabIndex = 67;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAdmin.Location = new System.Drawing.Point(25, 176);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(178, 36);
+            this.btnAdmin.TabIndex = 68;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // btnKelompokTani
+            // 
+            this.btnKelompokTani.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnKelompokTani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelompokTani.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnKelompokTani.Location = new System.Drawing.Point(25, 214);
+            this.btnKelompokTani.Name = "btnKelompokTani";
+            this.btnKelompokTani.Size = new System.Drawing.Size(178, 36);
+            this.btnKelompokTani.TabIndex = 69;
+            this.btnKelompokTani.Text = "Kelompok Tani";
+            this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnKelompokTani.UseVisualStyleBackColor = false;
+            // 
+            // btnPeminjaman
+            // 
+            this.btnPeminjaman.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjaman.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPeminjaman.Location = new System.Drawing.Point(25, 288);
+            this.btnPeminjaman.Name = "btnPeminjaman";
+            this.btnPeminjaman.Size = new System.Drawing.Size(178, 36);
+            this.btnPeminjaman.TabIndex = 70;
+            this.btnPeminjaman.Text = "Peminjaman";
+            this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPeminjaman.UseVisualStyleBackColor = false;
+            // 
+            // btnInformasiAlat
+            // 
+            this.btnInformasiAlat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInformasiAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformasiAlat.ForeColor = System.Drawing.Color.DimGray;
+            this.btnInformasiAlat.Location = new System.Drawing.Point(25, 251);
+            this.btnInformasiAlat.Name = "btnInformasiAlat";
+            this.btnInformasiAlat.Size = new System.Drawing.Size(178, 36);
+            this.btnInformasiAlat.TabIndex = 71;
+            this.btnInformasiAlat.Text = "Informasi Alat";
+            this.btnInformasiAlat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnInformasiAlat.UseVisualStyleBackColor = false;
+            this.btnInformasiAlat.Click += new System.EventHandler(this.btnInformasiAlat_Click);
+            // 
+            // btnPengembalian
+            // 
+            this.btnPengembalian.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPengembalian.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPengembalian.Location = new System.Drawing.Point(25, 325);
+            this.btnPengembalian.Name = "btnPengembalian";
+            this.btnPengembalian.Size = new System.Drawing.Size(178, 36);
+            this.btnPengembalian.TabIndex = 72;
+            this.btnPengembalian.Text = "Pengembalian";
+            this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPengembalian.UseVisualStyleBackColor = false;
+            // 
+            // btnRiwayat
+            // 
+            this.btnRiwayat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRiwayat.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRiwayat.Location = new System.Drawing.Point(25, 362);
+            this.btnRiwayat.Name = "btnRiwayat";
+            this.btnRiwayat.Size = new System.Drawing.Size(178, 36);
+            this.btnRiwayat.TabIndex = 73;
+            this.btnRiwayat.Text = "Riwayat";
+            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRiwayat.UseVisualStyleBackColor = false;
+            // 
+            // btnLaporan
+            // 
+            this.btnLaporan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporan.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLaporan.Location = new System.Drawing.Point(25, 399);
+            this.btnLaporan.Name = "btnLaporan";
+            this.btnLaporan.Size = new System.Drawing.Size(178, 36);
+            this.btnLaporan.TabIndex = 74;
+            this.btnLaporan.Text = "Laporan";
+            this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLaporan.UseVisualStyleBackColor = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.DimGray;
+            this.btnExit.Location = new System.Drawing.Point(25, 436);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(178, 36);
+            this.btnExit.TabIndex = 75;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FormKelompokTaniEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -407,6 +445,15 @@
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Kelompok_Tani3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLaporan);
+            this.Controls.Add(this.btnRiwayat);
+            this.Controls.Add(this.btnPengembalian);
+            this.Controls.Add(this.btnInformasiAlat);
+            this.Controls.Add(this.btnPeminjaman);
+            this.Controls.Add(this.btnKelompokTani);
+            this.Controls.Add(this.btnAdmin);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.BttnTambah);
@@ -428,20 +475,13 @@
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.LblTanggal);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.KelompokTani);
             this.Controls.Add(this.Admin);
-            this.Controls.Add(this.Home);
-            this.Controls.Add(this.InformasiAlat);
-            this.Controls.Add(this.Exit);
-            this.Controls.Add(this.Laporan);
-            this.Controls.Add(this.Riwayat);
-            this.Controls.Add(this.Pengembalian);
-            this.Controls.Add(this.Peminjaman);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormKelompokTaniEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKelompokTaniEdit";
             this.Load += new System.EventHandler(this.FormKelompokTaniEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -457,15 +497,7 @@
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label LblTanggal;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label KelompokTani;
         private System.Windows.Forms.Label Admin;
-        private System.Windows.Forms.Label Home;
-        private System.Windows.Forms.Label InformasiAlat;
-        private System.Windows.Forms.Label Exit;
-        private System.Windows.Forms.Label Laporan;
-        private System.Windows.Forms.Label Riwayat;
-        private System.Windows.Forms.Label Pengembalian;
-        private System.Windows.Forms.Label Peminjaman;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -483,5 +515,14 @@
         private System.Windows.Forms.Button BttnTambah;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnKelompokTani;
+        private System.Windows.Forms.Button btnPeminjaman;
+        private System.Windows.Forms.Button btnInformasiAlat;
+        private System.Windows.Forms.Button btnPengembalian;
+        private System.Windows.Forms.Button btnRiwayat;
+        private System.Windows.Forms.Button btnLaporan;
+        private System.Windows.Forms.Button btnExit;
     }
 }

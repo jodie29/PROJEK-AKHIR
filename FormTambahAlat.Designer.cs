@@ -151,6 +151,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTambahAlat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTambahAlat";
             this.Load += new System.EventHandler(this.FormTambahAlat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlat)).EndInit();

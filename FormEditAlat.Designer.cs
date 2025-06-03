@@ -143,6 +143,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditAlat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditAlat";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlat)).EndInit();
             this.ResumeLayout(false);
