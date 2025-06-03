@@ -75,5 +75,10 @@ namespace PROJEK_AKHIR
             FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
             formInformasiAlat.Show();
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

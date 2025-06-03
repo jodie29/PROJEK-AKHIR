@@ -103,6 +103,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bttn_Tambah_1 {
+            get {
+                object obj = ResourceManager.GetObject("Bttn Tambah 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fitur_Admin {
             get {
                 object obj = ResourceManager.GetObject("Fitur Admin", resourceCulture);
@@ -176,6 +186,16 @@ namespace PROJEK_AKHIR.Properties {
         internal static System.Drawing.Bitmap InfoAlatbttn {
             get {
                 object obj = ResourceManager.GetObject("InfoAlatbttn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat_Tambah {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat Tambah", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +303,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Peminjaman {
+            get {
+                object obj = ResourceManager.GetObject("Peminjaman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Peminjamanbttn {
             get {
                 object obj = ResourceManager.GetObject("Peminjamanbttn", resourceCulture);
@@ -316,6 +346,36 @@ namespace PROJEK_AKHIR.Properties {
         internal static System.Drawing.Bitmap Riwayatbttn {
             get {
                 object obj = ResourceManager.GetObject("Riwayatbttn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tambah_Alat {
+            get {
+                object obj = ResourceManager.GetObject("Tambah Alat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tambah_Alat1 {
+            get {
+                object obj = ResourceManager.GetObject("Tambah Alat1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tambah_Informasi_Alat {
+            get {
+                object obj = ResourceManager.GetObject("Tambah Informasi Alat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

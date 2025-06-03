@@ -37,17 +37,10 @@
             this.Riwayat = new System.Windows.Forms.Label();
             this.Pengembalian = new System.Windows.Forms.Label();
             this.Peminjaman = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanelAlat = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelAlat.SuspendLayout();
             this.SuspendLayout();
             // 
             // KelompokTani
@@ -55,7 +48,7 @@
             this.KelompokTani.AutoSize = true;
             this.KelompokTani.BackColor = System.Drawing.Color.Transparent;
             this.KelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KelompokTani.Location = new System.Drawing.Point(44, 240);
+            this.KelompokTani.Location = new System.Drawing.Point(44, 241);
             this.KelompokTani.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.KelompokTani.Name = "KelompokTani";
             this.KelompokTani.Size = new System.Drawing.Size(143, 22);
@@ -67,7 +60,7 @@
             this.Admin.AutoSize = true;
             this.Admin.BackColor = System.Drawing.SystemColors.Control;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(44, 171);
+            this.Admin.Location = new System.Drawing.Point(44, 174);
             this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(60, 22);
@@ -78,7 +71,7 @@
             // 
             this.Home.AutoSize = true;
             this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(44, 137);
+            this.Home.Location = new System.Drawing.Point(44, 143);
             this.Home.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(57, 22);
@@ -89,7 +82,7 @@
             // 
             this.InformasiAlat.AutoSize = true;
             this.InformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InformasiAlat.Location = new System.Drawing.Point(44, 208);
+            this.InformasiAlat.Location = new System.Drawing.Point(44, 209);
             this.InformasiAlat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InformasiAlat.Name = "InformasiAlat";
             this.InformasiAlat.Size = new System.Drawing.Size(118, 22);
@@ -100,7 +93,7 @@
             // 
             this.Exit.AutoSize = true;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.Exit.Location = new System.Drawing.Point(44, 418);
+            this.Exit.Location = new System.Drawing.Point(44, 419);
             this.Exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(40, 22);
@@ -111,7 +104,7 @@
             // 
             this.Laporan.AutoSize = true;
             this.Laporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Laporan.Location = new System.Drawing.Point(44, 385);
+            this.Laporan.Location = new System.Drawing.Point(44, 386);
             this.Laporan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Laporan.Name = "Laporan";
             this.Laporan.Size = new System.Drawing.Size(76, 22);
@@ -122,7 +115,7 @@
             // 
             this.Riwayat.AutoSize = true;
             this.Riwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Riwayat.Location = new System.Drawing.Point(44, 348);
+            this.Riwayat.Location = new System.Drawing.Point(44, 349);
             this.Riwayat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Riwayat.Name = "Riwayat";
             this.Riwayat.Size = new System.Drawing.Size(74, 22);
@@ -133,7 +126,7 @@
             // 
             this.Pengembalian.AutoSize = true;
             this.Pengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pengembalian.Location = new System.Drawing.Point(44, 312);
+            this.Pengembalian.Location = new System.Drawing.Point(44, 313);
             this.Pengembalian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Pengembalian.Name = "Pengembalian";
             this.Pengembalian.Size = new System.Drawing.Size(124, 22);
@@ -144,103 +137,48 @@
             // 
             this.Peminjaman.AutoSize = true;
             this.Peminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Peminjaman.Location = new System.Drawing.Point(44, 277);
+            this.Peminjaman.Location = new System.Drawing.Point(44, 278);
             this.Peminjaman.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Peminjaman.Name = "Peminjaman";
             this.Peminjaman.Size = new System.Drawing.Size(108, 22);
             this.Peminjaman.TabIndex = 30;
             this.Peminjaman.Text = "Peminjaman";
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelAlat
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(291, 171);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(22, 23, 22, 23);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(762, 509);
-            this.flowLayoutPanel1.TabIndex = 39;
+            this.flowLayoutPanelAlat.AutoScroll = true;
+            this.flowLayoutPanelAlat.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelAlat.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanelAlat.Location = new System.Drawing.Point(291, 171);
+            this.flowLayoutPanelAlat.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanelAlat.Name = "flowLayoutPanelAlat";
+            this.flowLayoutPanelAlat.Size = new System.Drawing.Size(762, 509);
+            this.flowLayoutPanelAlat.TabIndex = 39;
             // 
-            // panel1
+            // btnTambah
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(26, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(171, 203);
-            this.panel1.TabIndex = 1;
+            this.btnTambah.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Tambah;
+            this.btnTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTambah.Location = new System.Drawing.Point(1010, 129);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(43, 41);
+            this.btnTambah.TabIndex = 40;
+            this.btnTambah.UseVisualStyleBackColor = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click_1);
             // 
-            // label2
+            // tableLayoutPanel1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 160);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 122);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Edit;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(60, 151);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 38);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Hapus;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(16, 151);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 38);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 92);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Tambah;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(1002, 122);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 48);
-            this.button3.TabIndex = 40;
-            this.button3.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(97, 103);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // FormInformasiAlat
             // 
@@ -249,8 +187,8 @@
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Fitur_Informasi_Alat1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.flowLayoutPanelAlat);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.KelompokTani);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.Home);
@@ -265,10 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormInformasiAlat";
             this.Text = "FormInformasiAlat";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanelAlat.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,13 +220,8 @@
         private System.Windows.Forms.Label Riwayat;
         private System.Windows.Forms.Label Pengembalian;
         private System.Windows.Forms.Label Peminjaman;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAlat;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

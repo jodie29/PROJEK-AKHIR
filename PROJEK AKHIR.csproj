@@ -107,6 +107,12 @@
     <Compile Include="FormBaru.Designer.cs">
       <DependentUpon>FormBaru.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAlat.Designer.cs">
+      <DependentUpon>FormEditAlat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,11 +143,29 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPeminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeminjaman.Designer.cs">
+      <DependentUpon>FormPeminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPeminjamanKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeminjamanKT.Designer.cs">
+      <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahAlat.Designer.cs">
+      <DependentUpon>FormTambahAlat.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaru.resx">
       <DependentUpon>FormBaru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAlat.resx">
+      <DependentUpon>FormEditAlat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
@@ -166,8 +193,17 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPeminjaman.resx">
+      <DependentUpon>FormPeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeminjamanKT.resx">
+      <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahAlat.resx">
+      <DependentUpon>FormTambahAlat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -264,6 +300,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fitur Informasi Alat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Informasi Alat Tambah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Informasi Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peminjaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Tambah 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Alat1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
