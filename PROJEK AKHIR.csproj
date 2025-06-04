@@ -95,11 +95,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaru.Designer.cs">
+      <DependentUpon>FormBaru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAlat.Designer.cs">
+      <DependentUpon>FormEditAlat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformasiAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformasiAlat.Designer.cs">
+      <DependentUpon>FormInformasiAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKelompokTaniEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKelompokTaniEdit.Designer.cs">
+      <DependentUpon>FormKelompokTaniEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKelomppokTani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKelomppokTani.Designer.cs">
+      <DependentUpon>FormKelomppokTani.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -107,22 +143,67 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPeminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeminjaman.Designer.cs">
+      <DependentUpon>FormPeminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPeminjamanKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeminjamanKT.Designer.cs">
+      <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahAlat.Designer.cs">
+      <DependentUpon>FormTambahAlat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaru.resx">
+      <DependentUpon>FormBaru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAlat.resx">
+      <DependentUpon>FormEditAlat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformasiAlat.resx">
+      <DependentUpon>FormInformasiAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKelompokTaniEdit.resx">
+      <DependentUpon>FormKelompokTaniEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKelomppokTani.resx">
+      <DependentUpon>FormKelomppokTani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPeminjaman.resx">
+      <DependentUpon>FormPeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeminjamanKT.resx">
+      <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahAlat.resx">
+      <DependentUpon>FormTambahAlat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +243,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fitur Home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\From Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adminbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tanibttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Hapus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelompok Tani3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoAlatbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laporanbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peminjamanbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengembalianbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riwayatbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Outbttn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Informasi Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Tambah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Informasi Alat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Informasi Alat Tambah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Informasi Alat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peminjaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bttn Tambah 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tambah Alat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fitur Home5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -71,7 +71,7 @@ namespace PROJEK_AKHIR
 
         private string GetLastAdminId()
         {
-            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
             string lastId = null;
 
             string query = "SELECT id_admin FROM admin WHERE id_admin LIKE 'adm%' ORDER BY CAST(SUBSTRING(id_admin FROM 4) AS INT) DESC LIMIT 1";
@@ -125,7 +125,7 @@ namespace PROJEK_AKHIR
 
         private bool Register(string idAdmin, string nama, string email, string nohp, string username, string password)
         {
-            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
 
             string query = "INSERT INTO admin (id_admin, nama_admin, email, no_hp_admin, username, password) VALUES (@id_admin, @nama_admin, @email, @no_hp_admin, @username, @password)";
 
