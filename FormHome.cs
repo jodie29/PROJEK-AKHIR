@@ -1,31 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
 using Npgsql;
-
+using PROJEK_AKHIR.PROJEK_AKHIR;
 
 namespace PROJEK_AKHIR
 {
     public partial class FormHome : Form
     {
-        private string _loggedInAdminId;
-
-        public FormHome(string adminId)
-        {
-            InitializeComponent();
-            _loggedInAdminId = adminId;
-        }
-
         public FormHome()
         {
             InitializeComponent();
-            _loggedInAdminId = string.Empty;
         }
-
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(_loggedInAdminId))
+            string loggedInAdminId = UserSession.IdAdminLogin;
+
+            if (string.IsNullOrEmpty(loggedInAdminId))
+            {
+                MessageBox.Show("Tidak ada admin yang login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
 
             string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
             string query = "SELECT nama_admin FROM admin WHERE id_admin = @id_admin";
@@ -37,13 +32,13 @@ namespace PROJEK_AKHIR
                     conn.Open();
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@id_admin", _loggedInAdminId);
+                        cmd.Parameters.AddWithValue("@id_admin", loggedInAdminId);
                         using (NpgsqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                string namaAdmin = reader["nama_admin"].ToString();  // Corrected here
-                                label1.Text = $"Helo, welcome {namaAdmin}";  // Corrected here
+                                string namaAdmin = reader["nama_admin"].ToString();
+                                label1.Text = $"Hello, welcome {namaAdmin}";
                             }
                         }
                     }
@@ -55,12 +50,7 @@ namespace PROJEK_AKHIR
             }
         }
 
-            
-        
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void pictureBox5_Click(object sender, EventArgs e) { }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -81,6 +71,13 @@ namespace PROJEK_AKHIR
             this.Hide();
             FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
             formKelomppokTani.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
         }
     }
 }
