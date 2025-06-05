@@ -38,6 +38,22 @@
             this.btnRiwayat = new System.Windows.Forms.Button();
             this.btnLaporan = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.dtGKlompokTani = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanelAlat = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtKelompokTani = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNamaAlat = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtJumlahAlat = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTanggalPinjam = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenggatPinjam = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnTambahPinjam = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGKlompokTani)).BeginInit();
+            this.flowLayoutPanelAlat.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -177,6 +193,163 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnExit.UseVisualStyleBackColor = false;
             // 
+            // dtGKlompokTani
+            // 
+            this.dtGKlompokTani.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtGKlompokTani.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtGKlompokTani.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGKlompokTani.Location = new System.Drawing.Point(291, 179);
+            this.dtGKlompokTani.Name = "dtGKlompokTani";
+            this.dtGKlompokTani.RowHeadersWidth = 62;
+            this.dtGKlompokTani.RowTemplate.Height = 28;
+            this.dtGKlompokTani.Size = new System.Drawing.Size(755, 164);
+            this.dtGKlompokTani.TabIndex = 86;
+            // 
+            // flowLayoutPanelAlat
+            // 
+            this.flowLayoutPanelAlat.AutoScroll = true;
+            this.flowLayoutPanelAlat.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelAlat.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanelAlat.Location = new System.Drawing.Point(291, 362);
+            this.flowLayoutPanelAlat.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanelAlat.Name = "flowLayoutPanelAlat";
+            this.flowLayoutPanelAlat.Size = new System.Drawing.Size(437, 301);
+            this.flowLayoutPanelAlat.TabIndex = 87;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(97, 103);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // txtKelompokTani
+            // 
+            this.txtKelompokTani.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKelompokTani.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKelompokTani.Location = new System.Drawing.Point(768, 388);
+            this.txtKelompokTani.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtKelompokTani.Name = "txtKelompokTani";
+            this.txtKelompokTani.Size = new System.Drawing.Size(240, 26);
+            this.txtKelompokTani.TabIndex = 89;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.label5.Location = new System.Drawing.Point(773, 358);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 20);
+            this.label5.TabIndex = 88;
+            this.label5.Text = "Nama Kelompok Tani    :";
+            // 
+            // txtNamaAlat
+            // 
+            this.txtNamaAlat.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNamaAlat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaAlat.Location = new System.Drawing.Point(768, 449);
+            this.txtNamaAlat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNamaAlat.Name = "txtNamaAlat";
+            this.txtNamaAlat.Size = new System.Drawing.Size(240, 26);
+            this.txtNamaAlat.TabIndex = 91;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.label1.Location = new System.Drawing.Point(773, 419);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 20);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Nama Alat                       :";
+            // 
+            // txtJumlahAlat
+            // 
+            this.txtJumlahAlat.BackColor = System.Drawing.SystemColors.Window;
+            this.txtJumlahAlat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJumlahAlat.Location = new System.Drawing.Point(768, 511);
+            this.txtJumlahAlat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtJumlahAlat.Name = "txtJumlahAlat";
+            this.txtJumlahAlat.Size = new System.Drawing.Size(240, 26);
+            this.txtJumlahAlat.TabIndex = 93;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.label2.Location = new System.Drawing.Point(773, 481);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 20);
+            this.label2.TabIndex = 92;
+            this.label2.Text = "Jumlah Pinjam               :";
+            // 
+            // txtTanggalPinjam
+            // 
+            this.txtTanggalPinjam.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTanggalPinjam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTanggalPinjam.Location = new System.Drawing.Point(768, 573);
+            this.txtTanggalPinjam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTanggalPinjam.Name = "txtTanggalPinjam";
+            this.txtTanggalPinjam.Size = new System.Drawing.Size(240, 26);
+            this.txtTanggalPinjam.TabIndex = 95;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.label3.Location = new System.Drawing.Point(773, 543);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 20);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Tanggal Pinjam              :";
+            // 
+            // txtTenggatPinjam
+            // 
+            this.txtTenggatPinjam.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTenggatPinjam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenggatPinjam.Location = new System.Drawing.Point(768, 636);
+            this.txtTenggatPinjam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTenggatPinjam.Name = "txtTenggatPinjam";
+            this.txtTenggatPinjam.Size = new System.Drawing.Size(240, 26);
+            this.txtTenggatPinjam.TabIndex = 97;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.label4.Location = new System.Drawing.Point(773, 606);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 20);
+            this.label4.TabIndex = 96;
+            this.label4.Text = "Tenggat Pinjam              :";
+            // 
+            // btnTambahPinjam
+            // 
+            this.btnTambahPinjam.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Tambah;
+            this.btnTambahPinjam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTambahPinjam.Location = new System.Drawing.Point(1001, 129);
+            this.btnTambahPinjam.Name = "btnTambahPinjam";
+            this.btnTambahPinjam.Size = new System.Drawing.Size(45, 40);
+            this.btnTambahPinjam.TabIndex = 98;
+            this.btnTambahPinjam.UseVisualStyleBackColor = true;
+            this.btnTambahPinjam.Click += new System.EventHandler(this.btnTambahPinjam_Click);
+            // 
             // FormPeminjamanKT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -184,6 +357,19 @@
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjaman;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
+            this.Controls.Add(this.btnTambahPinjam);
+            this.Controls.Add(this.txtTenggatPinjam);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTanggalPinjam);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtJumlahAlat);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtNamaAlat);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtKelompokTani);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.flowLayoutPanelAlat);
+            this.Controls.Add(this.dtGKlompokTani);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLaporan);
             this.Controls.Add(this.btnRiwayat);
@@ -199,6 +385,9 @@
             this.Name = "FormPeminjamanKT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPeminjamanKT";
+            this.Load += new System.EventHandler(this.FormPeminjamanKT_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGKlompokTani)).EndInit();
+            this.flowLayoutPanelAlat.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +405,19 @@
         private System.Windows.Forms.Button btnRiwayat;
         private System.Windows.Forms.Button btnLaporan;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DataGridView dtGKlompokTani;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAlat;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtKelompokTani;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNamaAlat;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtJumlahAlat;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTanggalPinjam;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTenggatPinjam;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnTambahPinjam;
     }
 }

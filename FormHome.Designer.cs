@@ -124,6 +124,7 @@
             this.btnPeminjaman.Size = new System.Drawing.Size(355, 106);
             this.btnPeminjaman.TabIndex = 13;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
+            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnPengembalian
             // 

@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using PROJEK_AKHIR.PROJEK_AKHIR;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -13,12 +14,10 @@ namespace PROJEK_AKHIR
         {
             InitializeComponent();
         }
-
         void KondisiAwal()
         {
             LblTanggal.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
-
         private void TampilkanAdmin()
         {
             try
@@ -71,35 +70,33 @@ namespace PROJEK_AKHIR
                     var selectedRow = dataGridView1.SelectedRows[0];
                     var idAdminValue = selectedRow.Cells["id_admin"].Value.ToString();
 
-                    if (!string.IsNullOrEmpty(idAdminValue) && idAdminValue.StartsWith("adm"))
+                    if (!string.IsNullOrEmpty(idAdminValue))
                     {
-                        string idAdminStr = idAdminValue.Substring(3);  
-                        if (int.TryParse(idAdminStr, out int idAdmin))
+                        if (idAdminValue == UserSession.IdAdminLogin)
                         {
-                            string deleteQuery = "DELETE FROM admin WHERE id_admin = @id_admin";
+                            MessageBox.Show("Anda tidak dapat menghapus admin yang sedang login.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
-                            using (var conn = new NpgsqlConnection(connectionString))
+                        string deleteQuery = "DELETE FROM admin WHERE id_admin = @id_admin";
+
+                        using (var conn = new NpgsqlConnection(connectionString))
+                        {
+                            conn.Open();
+                            using (var cmd = new NpgsqlCommand(deleteQuery, conn))
                             {
-                                conn.Open();
-                                using (var cmd = new NpgsqlCommand(deleteQuery, conn))
-                                {
-                                    cmd.Parameters.AddWithValue("@id_admin", idAdminValue);  
-                                    cmd.ExecuteNonQuery();
-                                }
-                                conn.Close();
+                                cmd.Parameters.AddWithValue("@id_admin", idAdminValue);
+                                cmd.ExecuteNonQuery();
                             }
+                            conn.Close();
+                        }
 
-                            TampilkanAdmin();
-                            MessageBox.Show("Data berhasil dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("ID Admin tidak valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        TampilkanAdmin();  
+                        MessageBox.Show("Data berhasil dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("ID Admin tidak sesuai format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("ID Admin tidak valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -112,6 +109,7 @@ namespace PROJEK_AKHIR
                 MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void KelompokTani_Click(object sender, EventArgs e)
         {
@@ -132,6 +130,11 @@ namespace PROJEK_AKHIR
             this.Hide();
             FormHome formHome = new FormHome();
             formHome.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

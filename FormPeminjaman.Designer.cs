@@ -28,37 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewPeminjaman = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewPeminjaman
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(290, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(761, 496);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Edit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(957, 135);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
+            this.dataGridViewPeminjaman.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewPeminjaman.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPeminjaman.Location = new System.Drawing.Point(290, 174);
+            this.dataGridViewPeminjaman.Name = "dataGridViewPeminjaman";
+            this.dataGridViewPeminjaman.RowHeadersWidth = 62;
+            this.dataGridViewPeminjaman.RowTemplate.Height = 28;
+            this.dataGridViewPeminjaman.Size = new System.Drawing.Size(761, 496);
+            this.dataGridViewPeminjaman.TabIndex = 0;
             // 
             // btnDelete
             // 
@@ -71,6 +57,7 @@
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDelete.TabIndex = 32;
             this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormPeminjaman
             // 
@@ -79,17 +66,15 @@
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjaman;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewPeminjaman);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPeminjaman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPeminjaman";
             this.Load += new System.EventHandler(this.FormPeminjaman_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeminjaman)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
 
@@ -97,8 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridViewPeminjaman;
         private System.Windows.Forms.PictureBox btnDelete;
     }
 }
