@@ -183,6 +183,26 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FiturLaporan {
+            get {
+                object obj = ResourceManager.GetObject("FiturLaporan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FiturRiwayat {
+            get {
+                object obj = ResourceManager.GetObject("FiturRiwayat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap From_Admin {
             get {
                 object obj = ResourceManager.GetObject("From Admin", resourceCulture);
@@ -333,6 +353,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pengembalian {
+            get {
+                object obj = ResourceManager.GetObject("Pengembalian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pengembalianbttn {
             get {
                 object obj = ResourceManager.GetObject("Pengembalianbttn", resourceCulture);
@@ -386,6 +416,16 @@ namespace PROJEK_AKHIR.Properties {
         internal static System.Drawing.Bitmap Tambah_Informasi_Alat {
             get {
                 object obj = ResourceManager.GetObject("Tambah Informasi Alat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vector {
+            get {
+                object obj = ResourceManager.GetObject("Vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

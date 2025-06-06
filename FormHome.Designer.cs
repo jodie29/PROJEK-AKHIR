@@ -36,6 +36,7 @@
             this.btnLaporan = new System.Windows.Forms.Button();
             this.btnPeminjaman = new System.Windows.Forms.Button();
             this.btnPengembalian = new System.Windows.Forms.Button();
+            this.btnRiwayat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bttnAAdmin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@
             this.btnLaporan.Size = new System.Drawing.Size(355, 100);
             this.btnLaporan.TabIndex = 12;
             this.btnLaporan.UseVisualStyleBackColor = true;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // btnPeminjaman
             // 
@@ -137,6 +139,20 @@
             this.btnPengembalian.Size = new System.Drawing.Size(355, 106);
             this.btnPengembalian.TabIndex = 14;
             this.btnPengembalian.UseVisualStyleBackColor = false;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
+            // 
+            // btnRiwayat
+            // 
+            this.btnRiwayat.BackColor = System.Drawing.Color.Transparent;
+            this.btnRiwayat.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Riwayatbttn;
+            this.btnRiwayat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiwayat.Location = new System.Drawing.Point(653, 459);
+            this.btnRiwayat.Name = "btnRiwayat";
+            this.btnRiwayat.Size = new System.Drawing.Size(355, 106);
+            this.btnRiwayat.TabIndex = 15;
+            this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // FormHome
             // 
@@ -145,6 +161,7 @@
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Fitur_Home5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
+            this.Controls.Add(this.btnRiwayat);
             this.Controls.Add(this.btnPengembalian);
             this.Controls.Add(this.btnPeminjaman);
             this.Controls.Add(this.btnLaporan);
@@ -177,5 +194,6 @@
         private System.Windows.Forms.Button btnLaporan;
         private System.Windows.Forms.Button btnPeminjaman;
         private System.Windows.Forms.Button btnPengembalian;
+        private System.Windows.Forms.Button btnRiwayat;
     }
 }
