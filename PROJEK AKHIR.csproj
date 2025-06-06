@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -137,6 +152,12 @@
     <Compile Include="FormKelomppokTani.Designer.cs">
       <DependentUpon>FormKelomppokTani.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporan.Designer.cs">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,11 +176,23 @@
     <Compile Include="FormPeminjamanKT.Designer.cs">
       <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPenggembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenggembalian.Designer.cs">
+      <DependentUpon>FormPenggembalian.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRiwayat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRiwayat.Designer.cs">
+      <DependentUpon>FormRiwayat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTambahAlat.cs">
       <SubType>Form</SubType>
@@ -191,6 +224,9 @@
     <EmbeddedResource Include="FormKelomppokTani.resx">
       <DependentUpon>FormKelomppokTani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporan.resx">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,8 +236,14 @@
     <EmbeddedResource Include="FormPeminjamanKT.resx">
       <DependentUpon>FormPeminjamanKT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPenggembalian.resx">
+      <DependentUpon>FormPenggembalian.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRiwayat.resx">
+      <DependentUpon>FormRiwayat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahAlat.resx">
       <DependentUpon>FormTambahAlat.cs</DependentUpon>
@@ -322,6 +364,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fitur Home5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pengembalian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiturRiwayat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiturLaporan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

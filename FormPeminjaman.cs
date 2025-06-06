@@ -27,8 +27,7 @@ namespace PROJEK_AKHIR
             Join admin ad On p.id_admin = ad.id_admin
             Join status s On p.id_status = s.id_status
             Join alamat a On k.id_alamat = a.id_alamat
-            Order By p.tanggal_pinjam Desc;
-        ";
+            Order By p.tanggal_pinjam Desc";
 
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
@@ -39,25 +38,25 @@ namespace PROJEK_AKHIR
 
                     dataGridViewPeminjaman.DataSource = dataTable;
 
-                    dataGridViewPeminjaman.Columns["nama_kelompoktani"].HeaderText = "Nama Kelompok Tani";
-                    dataGridViewPeminjaman.Columns["alamat"].HeaderText = "Alamat Kelompok Tani";
-                    dataGridViewPeminjaman.Columns["nama_admin"].HeaderText = "Admin yang Melayani";
-                    dataGridViewPeminjaman.Columns["nama_alat"].HeaderText = "Alat yang Dipinjam";
+                    dataGridViewPeminjaman.Columns["nama_kelompoktani"].HeaderText = "Kelompok Tani";
+                    dataGridViewPeminjaman.Columns["alamat"].HeaderText = "Alamat";
+                    dataGridViewPeminjaman.Columns["nama_admin"].HeaderText = "Admin Yang Menangani";
+                    dataGridViewPeminjaman.Columns["nama_alat"].HeaderText = "Alat";
                     dataGridViewPeminjaman.Columns["jumlah"].HeaderText = "Jumlah Pinjam";
                     dataGridViewPeminjaman.Columns["tanggal_pinjam"].HeaderText = "Tanggal Pinjam";
                     dataGridViewPeminjaman.Columns["tenggat_pinjam"].HeaderText = "Tenggat Pinjam";
                     dataGridViewPeminjaman.Columns["status"].HeaderText = "Status";
                     dataGridViewPeminjaman.Columns["jumlah_kelompoktani"].HeaderText = "Jumlah Anggota Kelompok Tani";
 
-                    dataGridViewPeminjaman.Columns["nama_kelompoktani"].Width = 200;
-                    dataGridViewPeminjaman.Columns["alamat"].Width = 250;
-                    dataGridViewPeminjaman.Columns["nama_admin"].Width = 150;
-                    dataGridViewPeminjaman.Columns["nama_alat"].Width = 150;
+                    dataGridViewPeminjaman.Columns["nama_kelompoktani"].Width = 180;
+                    dataGridViewPeminjaman.Columns["alamat"].Width = 190;
+                    dataGridViewPeminjaman.Columns["nama_admin"].Width = 165;
+                    dataGridViewPeminjaman.Columns["nama_alat"].Width = 100;
                     dataGridViewPeminjaman.Columns["jumlah"].Width = 100;
                     dataGridViewPeminjaman.Columns["tanggal_pinjam"].Width = 120;
                     dataGridViewPeminjaman.Columns["tenggat_pinjam"].Width = 120;
-                    dataGridViewPeminjaman.Columns["status"].Width = 120;
-                    dataGridViewPeminjaman.Columns["jumlah_kelompoktani"].Width = 150;
+                    dataGridViewPeminjaman.Columns["status"].Width = 100;
+                    dataGridViewPeminjaman.Columns["jumlah_kelompoktani"].Width = 120;
 
                     conn.Close();
                 }

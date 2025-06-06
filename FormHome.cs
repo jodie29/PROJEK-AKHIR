@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Npgsql;
+using PROJEK_AKHIR;
 using PROJEK_AKHIR.PROJEK_AKHIR;
 
 namespace PROJEK_AKHIR
@@ -79,5 +80,27 @@ namespace PROJEK_AKHIR
             FormPeminjaman formPeminjaman = new FormPeminjaman();
             formPeminjaman.Show();
         }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
     }
 }
+
