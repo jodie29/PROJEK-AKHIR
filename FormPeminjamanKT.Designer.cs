@@ -61,25 +61,25 @@
             this.Admin.AutoSize = true;
             this.Admin.BackColor = System.Drawing.SystemColors.Control;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(45, 184);
+            this.Admin.Location = new System.Drawing.Point(45, 185);
             this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 76;
-            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHome.Location = new System.Drawing.Point(25, 138);
+            this.btnHome.Location = new System.Drawing.Point(25, 139);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(178, 36);
             this.btnHome.TabIndex = 77;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnAdmin
             // 
@@ -87,7 +87,7 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAdmin.Location = new System.Drawing.Point(25, 176);
+            this.btnAdmin.Location = new System.Drawing.Point(25, 177);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(178, 36);
             this.btnAdmin.TabIndex = 78;
@@ -101,13 +101,14 @@
             this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeminjaman.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPeminjaman.Location = new System.Drawing.Point(25, 288);
+            this.btnPeminjaman.Location = new System.Drawing.Point(25, 289);
             this.btnPeminjaman.Name = "btnPeminjaman";
             this.btnPeminjaman.Size = new System.Drawing.Size(178, 36);
             this.btnPeminjaman.TabIndex = 79;
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
+            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnKelompokTani
             // 
@@ -115,7 +116,7 @@
             this.btnKelompokTani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKelompokTani.ForeColor = System.Drawing.Color.DimGray;
-            this.btnKelompokTani.Location = new System.Drawing.Point(25, 213);
+            this.btnKelompokTani.Location = new System.Drawing.Point(25, 214);
             this.btnKelompokTani.Name = "btnKelompokTani";
             this.btnKelompokTani.Size = new System.Drawing.Size(178, 36);
             this.btnKelompokTani.TabIndex = 80;
@@ -129,13 +130,14 @@
             this.btnInformasiAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformasiAlat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInformasiAlat.Location = new System.Drawing.Point(25, 251);
+            this.btnInformasiAlat.Location = new System.Drawing.Point(25, 252);
             this.btnInformasiAlat.Name = "btnInformasiAlat";
             this.btnInformasiAlat.Size = new System.Drawing.Size(178, 36);
             this.btnInformasiAlat.TabIndex = 81;
             this.btnInformasiAlat.Text = "Informasi Alat";
             this.btnInformasiAlat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnInformasiAlat.UseVisualStyleBackColor = false;
+            this.btnInformasiAlat.Click += new System.EventHandler(this.btnInformasiAlat_Click);
             // 
             // btnPengembalian
             // 
@@ -143,13 +145,14 @@
             this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengembalian.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPengembalian.Location = new System.Drawing.Point(25, 325);
+            this.btnPengembalian.Location = new System.Drawing.Point(25, 326);
             this.btnPengembalian.Name = "btnPengembalian";
             this.btnPengembalian.Size = new System.Drawing.Size(178, 36);
             this.btnPengembalian.TabIndex = 82;
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPengembalian.UseVisualStyleBackColor = false;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnRiwayat
             // 
@@ -157,13 +160,14 @@
             this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRiwayat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRiwayat.Location = new System.Drawing.Point(25, 362);
+            this.btnRiwayat.Location = new System.Drawing.Point(25, 363);
             this.btnRiwayat.Name = "btnRiwayat";
             this.btnRiwayat.Size = new System.Drawing.Size(178, 36);
             this.btnRiwayat.TabIndex = 83;
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // btnLaporan
             // 
@@ -171,13 +175,14 @@
             this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporan.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLaporan.Location = new System.Drawing.Point(25, 399);
+            this.btnLaporan.Location = new System.Drawing.Point(25, 400);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(178, 36);
             this.btnLaporan.TabIndex = 84;
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLaporan.UseVisualStyleBackColor = false;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // btnExit
             // 
@@ -185,13 +190,14 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
-            this.btnExit.Location = new System.Drawing.Point(25, 436);
+            this.btnExit.Location = new System.Drawing.Point(25, 437);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(178, 36);
             this.btnExit.TabIndex = 85;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // dtGKlompokTani
             // 

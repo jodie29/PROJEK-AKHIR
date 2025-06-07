@@ -28,14 +28,14 @@ namespace PROJEK_AKHIR
                     txtJumlahAdmin.Text = result.ToString();
                 }
 
-                string queryJenisAlat = "Select Count(DISTINCT nama_alat) From alat";
+                string queryJenisAlat = "Select Count(DISTINCT nama_alat) From alat Where is_active = TRUE";
                 using (var cmd = new NpgsqlCommand(queryJenisAlat, conn))
                 {
                     var result = cmd.ExecuteScalar();
                     txtJenisAlat.Text = result.ToString();
                 }
 
-                string queryAlatTersedia = "Select Sum(jumlah) From alat ";
+                string queryAlatTersedia = "Select Sum(jumlah) From alat Where is_active = TRUE ";
                 using (var cmd = new NpgsqlCommand(queryAlatTersedia, conn))
                 {
                     var result = cmd.ExecuteScalar();
@@ -78,5 +78,6 @@ namespace PROJEK_AKHIR
                 }
             }
         }
+
     }
 }

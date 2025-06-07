@@ -70,7 +70,7 @@ namespace PROJEK_AKHIR
         private void btnKelompokTani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
             formKelomppokTani.Show();
         }
 

@@ -57,6 +57,7 @@ namespace PROJEK_AKHIR
         {
             alat.Nama = txtNamaAlat.Text;
             alat.Jumlah = int.Parse(txtJumlahAlat.Text);
+
             alat.GambarPath = pictureBoxAlat.ImageLocation;
 
             UpdateAlatInDatabase(alat);

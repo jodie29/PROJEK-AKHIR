@@ -14,10 +14,12 @@ namespace PROJEK_AKHIR
         {
             InitializeComponent();
         }
+
         void KondisiAwal()
         {
             LblTanggal.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
+
         private void TampilkanAdmin()
         {
             try
@@ -61,80 +63,61 @@ namespace PROJEK_AKHIR
             LblJam.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-                    var selectedRow = dataGridView1.SelectedRows[0];
-                    var idAdminValue = selectedRow.Cells["id_admin"].Value.ToString();
-
-                    if (!string.IsNullOrEmpty(idAdminValue))
-                    {
-                        if (idAdminValue == UserSession.IdAdminLogin)
-                        {
-                            MessageBox.Show("Anda tidak dapat menghapus admin yang sedang login.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        string deleteQuery = "DELETE FROM admin WHERE id_admin = @id_admin";
-
-                        using (var conn = new NpgsqlConnection(connectionString))
-                        {
-                            conn.Open();
-                            using (var cmd = new NpgsqlCommand(deleteQuery, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@id_admin", idAdminValue);
-                                cmd.ExecuteNonQuery();
-                            }
-                            conn.Close();
-                        }
-
-                        TampilkanAdmin();  
-                        MessageBox.Show("Data berhasil dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("ID Admin tidak valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Silakan pilih baris yang ingin dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Terjadi kesalahan saat menghapus data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
 
 
-        private void KelompokTani_Click(object sender, EventArgs e)
+        private void btnKelompoktani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
             formKelomppokTani.Show();
         }
 
-        private void Home_Click(object sender, EventArgs e)
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
+            formInformasiAlat.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
+        }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan ();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormHome formHome = new FormHome();
             formHome.Show();
-        }
-
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormHome formHome = new FormHome();
-            formHome.Show();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
