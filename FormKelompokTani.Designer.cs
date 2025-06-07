@@ -1,6 +1,6 @@
 ﻿namespace PROJEK_AKHIR
 {
-    partial class FormKelomppokTani
+    partial class FormKelompokTani
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(289, 175);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(768, 506);
@@ -130,8 +129,7 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnExit
             // 
@@ -161,6 +159,7 @@
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLaporan.UseVisualStyleBackColor = false;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // btnRiwayat
             // 
@@ -175,6 +174,7 @@
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // btnPengembalian
             // 
@@ -189,6 +189,7 @@
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPengembalian.UseVisualStyleBackColor = false;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnInformasiAlat
             // 
@@ -218,6 +219,7 @@
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
+            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnKelompokTani
             // 
@@ -285,7 +287,7 @@
             this.Home.TabIndex = 76;
             this.Home.Text = "Home";
             // 
-            // FormKelomppokTani
+            // FormKelompokTani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,9 +314,9 @@
             this.Controls.Add(this.btnDelete);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormKelomppokTani";
+            this.Name = "FormKelompokTani";
             this.Text = "FormKelomppokTani";
-            this.Load += new System.EventHandler(this.FormKelomppokTani_Load);
+            this.Load += new System.EventHandler(this.FormKelompokTani_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

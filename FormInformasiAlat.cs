@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace PROJEK_AKHIR
 {
-    public partial class FormInformasiAlat: Form
+    public partial class FormInformasiAlat : Form
     {
         private BindingList<Alat> alatList = new BindingList<Alat>();
 
@@ -25,12 +23,12 @@ namespace PROJEK_AKHIR
         private void LoadDataFromDatabase()
         {
             string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
-            using (var conn = new Npgsql.NpgsqlConnection(connectionString))
+            using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
 
-                string query = "SELECT nama_alat, jumlah, gambar_alat FROM alat";
-                using (var cmd = new Npgsql.NpgsqlCommand(query, conn))
+                string query = "SELECT nama_alat, jumlah, gambar_alat FROM alat WHERE is_active = TRUE";
+                using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -40,8 +38,6 @@ namespace PROJEK_AKHIR
                             int jumlah = reader.GetInt32(1);
                             string imagePath = reader.GetString(2);
 
-                            
-
                             Alat alatBaru = new Alat
                             {
                                 Nama = namaAlat,
@@ -50,22 +46,21 @@ namespace PROJEK_AKHIR
                             };
                             alatList.Add(alatBaru);
                         }
-
                     }
                 }
             }
             UpdateFlowLayoutPanel();
         }
 
-        private void DeleteAlatFromDatabase(Alat alat)
+        private void SoftDeleteAlatFromDatabase(Alat alat)
         {
             string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
-            using (var conn = new Npgsql.NpgsqlConnection(connectionString))
+            using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
 
-                string query = "DELETE FROM alat WHERE nama_alat = @namaAlat";
-                using (var cmd = new Npgsql.NpgsqlCommand(query, conn))
+                string query = "UPDATE alat SET is_active = FALSE WHERE nama_alat = @namaAlat";
+                using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("namaAlat", alat.Nama);
                     cmd.ExecuteNonQuery();
@@ -73,10 +68,9 @@ namespace PROJEK_AKHIR
             }
         }
 
-
         private void UpdateFlowLayoutPanel()
         {
-            flowLayoutPanelAlat.Controls.Clear(); 
+            flowLayoutPanelAlat.Controls.Clear();  
             foreach (var alat in alatList)
             {
                 Panel panelAlat = new Panel();
@@ -120,7 +114,6 @@ namespace PROJEK_AKHIR
                 {
                     FormEditAlat formEditAlat = new FormEditAlat(alat);
                     formEditAlat.ShowDialog();
-
                     UpdateFlowLayoutPanel();
                 };
                 layout.Controls.Add(btnEdit, 0, 3);
@@ -130,19 +123,17 @@ namespace PROJEK_AKHIR
                 btnDelete.Dock = DockStyle.Fill;
                 btnDelete.Click += (s, e) =>
                 {
-                    alatList.Remove(alat);
-
-                    DeleteAlatFromDatabase(alat);
-
-                    UpdateFlowLayoutPanel();
+                    alatList.Remove(alat); 
+                    SoftDeleteAlatFromDatabase(alat); 
+                    UpdateFlowLayoutPanel(); 
                 };
                 layout.Controls.Add(btnDelete, 0, 4);
 
                 panelAlat.Controls.Add(layout);
-
                 flowLayoutPanelAlat.Controls.Add(panelAlat);
             }
         }
+
         public void TambahAlat(string namaAlat, int jumlah, string imagePath)
         {
             Alat alatBaru = new Alat
@@ -153,10 +144,8 @@ namespace PROJEK_AKHIR
             };
 
             alatList.Add(alatBaru);
-
             UpdateFlowLayoutPanel();
         }
-
 
         private void btnTambah_Click_1(object sender, EventArgs e)
         {
@@ -167,7 +156,7 @@ namespace PROJEK_AKHIR
 
         private void FormInformasiAlat_Load(object sender, EventArgs e)
         {
-            LoadDataFromDatabase();
+            LoadDataFromDatabase();  
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -187,7 +176,7 @@ namespace PROJEK_AKHIR
         private void btnKelompokTani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormKelomppokTani formKelomppokTani = new FormKelomppokTani();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
             formKelomppokTani.Show();
         }
 
@@ -197,6 +186,34 @@ namespace PROJEK_AKHIR
             FormPeminjaman formPeminjaman = new FormPeminjaman();
             formPeminjaman.Show();
         }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
     }
 
     public class Alat
@@ -204,5 +221,6 @@ namespace PROJEK_AKHIR
         public string Nama { get; set; }
         public int Jumlah { get; set; }
         public string GambarPath { get; set; }
+        public bool IsActive { get; set; } 
     }
 }

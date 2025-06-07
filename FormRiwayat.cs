@@ -102,5 +102,63 @@ namespace PROJEK_AKHIR
                 dt.DefaultView.RowFilter = filterExpression; 
             }
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdminn = new FormAdmin();
+            formAdminn.Show();
+        }
+
+
+        private void btnKelompoktani_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
+            formInformasiAlat.Show();
+        }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnPeminjaman_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
+        }
     }
 }

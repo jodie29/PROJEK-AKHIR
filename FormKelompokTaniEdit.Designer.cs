@@ -122,6 +122,7 @@
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 44;
+            this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // label3
             // 
@@ -364,6 +365,7 @@
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
+            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnInformasiAlat
             // 
@@ -393,6 +395,7 @@
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPengembalian.UseVisualStyleBackColor = false;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnRiwayat
             // 
@@ -407,6 +410,7 @@
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // btnLaporan
             // 
@@ -421,6 +425,7 @@
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLaporan.UseVisualStyleBackColor = false;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // btnExit
             // 

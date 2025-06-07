@@ -8,7 +8,7 @@ namespace PROJEK_AKHIR
     public partial class FormPenggembalian : Form
     {
         private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
-        private int idPinjamDipilih = -1; // Menyimpan ID pinjam yang dipilih
+        private int idPinjamDipilih = -1;
 
         public FormPenggembalian()
         {
@@ -16,7 +16,6 @@ namespace PROJEK_AKHIR
             LoadDataPengembalian();
             dtGridPengembalian.CellClick += dtGridPengembalian_CellClick;
 
-            // Menambahkan event TextChanged untuk TextBox pencarian
             txtSearch.TextChanged += txtSearch_TextChanged;
         }
 
@@ -73,7 +72,6 @@ namespace PROJEK_AKHIR
             {
                 DataGridViewRow row = dtGridPengembalian.Rows[e.RowIndex];
 
-                // Mengakses id_pinjam yang sudah ada dalam DataGridView
                 if (row.Cells["id_pinjam"] != null)
                 {
                     idPinjamDipilih = Convert.ToInt32(row.Cells["id_pinjam"].Value);
@@ -88,19 +86,15 @@ namespace PROJEK_AKHIR
                 string status = row.Cells["status"].Value.ToString();
                 string tanggalKembali = row.Cells["tanggal_kembali"].Value.ToString();
 
-                // Menampilkan data pada form input
                 txtNamaKelompokTani.Text = namaKelompokTani;
-                txtTanggalKembali.Text = DateTime.Now.ToString("yyyy-MM-dd"); // Set current date to tanggal_kembali
-                txtStatus.Text = status;
-
-                // Hanya mengaktifkan tombol "Kembalikan" jika status bukan "Dikembalikan" dan tanggal_kembali null
+                txtTanggalKembali.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 if (status != "Dikembalikan" && string.IsNullOrEmpty(tanggalKembali))
                 {
-                    btnKembalikan.Enabled = true;  // Tombol diaktifkan
+                    btnKembalikan.Enabled = true;
                 }
                 else
                 {
-                    btnKembalikan.Enabled = false; // Tombol dinonaktifkan
+                    btnKembalikan.Enabled = false;
                 }
             }
         }
@@ -115,44 +109,31 @@ namespace PROJEK_AKHIR
 
         private void btnKembalikan_Click_1(object sender, EventArgs e)
         {
-            // Pastikan ada data yang dipilih
             if (idPinjamDipilih != -1)
             {
-                // Membuka koneksi ke database
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    // Query untuk memperbarui tanggal_kembali dan id_status
                     string updateQuery = "UPDATE pinjam SET tanggal_kembali = @tglKembali, id_status = 3 WHERE id_pinjam = @id";
 
-                    // Menyiapkan perintah SQL untuk menjalankan update
                     using (var cmd = new NpgsqlCommand(updateQuery, conn))
                     {
-                        // Menambahkan parameter untuk query
-                        cmd.Parameters.AddWithValue("@tglKembali", DateTime.Now); // Menggunakan tanggal saat ini untuk tanggal_kembali
-                        cmd.Parameters.AddWithValue("@id", idPinjamDipilih); // ID pinjam yang dipilih
+                        cmd.Parameters.AddWithValue("@tglKembali", DateTime.Now); 
+                        cmd.Parameters.AddWithValue("@id", idPinjamDipilih);
 
-                        // Menjalankan perintah update
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                // Menampilkan pesan sukses
                 MessageBox.Show("Pengembalian berhasil disimpan dan status diperbarui.");
 
-                // Memuat ulang data setelah pengembalian berhasil
                 LoadDataPengembalian();
-
-                // Kosongkan form input setelah berhasil
                 KosongkanForm();
-
-                // Reset ID pinjam yang dipilih
                 idPinjamDipilih = -1;
             }
             else
             {
-                // Jika tidak ada data yang dipilih
                 MessageBox.Show("Pilih data yang ingin dikembalikan terlebih dahulu.");
             }
         }
@@ -166,6 +147,63 @@ namespace PROJEK_AKHIR
                 txtSearch.Text);
 
             dt.DefaultView.RowFilter = filterExpression;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdminn = new FormAdmin();
+            formAdminn.Show();
+        }
+
+
+        private void btnKelompoktani_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
+            formInformasiAlat.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnPeminjaman_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
         }
     }
 }

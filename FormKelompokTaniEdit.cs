@@ -181,7 +181,10 @@ namespace PROJEK_AKHIR
             {
                 string query = "SELECT k.id_kelompoktani, k.nama_kelompoktani, k.nik, k.jumlah_kelompoktani, k.no_hp_kelompoktani, k.deskripsi_jalan, a.desa || ',' || a.kecamatan || ',' || a.kabupaten AS alamat " +
                "FROM kelompok_tani k " +
-               "JOIN alamat a ON k.id_alamat = a.id_alamat " + "Order By k.id_kelompoktani Asc";
+               "JOIN alamat a ON k.id_alamat = a.id_alamat " +
+               "WHERE k.is_active = TRUE " +  
+               "ORDER BY k.id_kelompoktani ASC";
+
 
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
@@ -377,6 +380,41 @@ namespace PROJEK_AKHIR
             this.Hide();
             FormHome formHome = new FormHome();
             formHome.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
+        }
+
+        private void Admin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
         }
     }
 }

@@ -45,6 +45,12 @@ namespace PROJEK_AKHIR
                 return;
             }
 
+            if (AlatSudahAda(namaAlat))
+            {
+                MessageBox.Show("Alat dengan nama tersebut sudah ada di database!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FormInformasiAlat formInformasiAlat = (FormInformasiAlat)Application.OpenForms["FormInformasiAlat"];
             if (formInformasiAlat == null)
             {
@@ -56,6 +62,23 @@ namespace PROJEK_AKHIR
             SimpanKeDatabase(namaAlat, jumlah, imagePath);
 
             this.Close();
+        }
+
+        private bool AlatSudahAda(string namaAlat)
+        {
+            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+
+            using (var conn = new Npgsql.NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM alat WHERE nama_alat = @namaAlat";
+                using (var cmd = new Npgsql.NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("namaAlat", namaAlat);
+                    var result = cmd.ExecuteScalar();
+                    return Convert.ToInt32(result) > 0; 
+                }
+            }
         }
 
         private void SimpanKeDatabase(string namaAlat, int jumlah, string imagePath)
@@ -90,6 +113,62 @@ namespace PROJEK_AKHIR
             txtNamaAlat.Text = "";
             txtJumlahAlat.Text = "";
             pictureBoxAlat.Image = null;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
+        }
+
+        private void btnKelompokTani_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
+        }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
     }
 }

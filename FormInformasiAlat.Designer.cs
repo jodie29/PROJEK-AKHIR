@@ -93,6 +93,7 @@
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLaporan
             // 
@@ -107,6 +108,7 @@
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLaporan.UseVisualStyleBackColor = false;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // btnRiwayat
             // 
@@ -121,6 +123,7 @@
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnRiwayat.UseVisualStyleBackColor = false;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // btnPengembalian
             // 
@@ -135,6 +138,7 @@
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnPengembalian.UseVisualStyleBackColor = false;
+            this.btnPengembalian.Click += new System.EventHandler(this.btnPengembalian_Click);
             // 
             // btnPeminjaman
             // 

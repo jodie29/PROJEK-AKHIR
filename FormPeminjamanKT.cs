@@ -39,6 +39,7 @@ namespace PROJEK_AKHIR
                 string query = "SELECT k.id_kelompoktani, k.nama_kelompoktani, k.nik, k.jumlah_kelompoktani, k.no_hp_kelompoktani, k.deskripsi_jalan, a.desa || ',' || a.kecamatan || ',' || a.kabupaten AS alamat " +
                                "FROM kelompok_tani k " +
                                "JOIN alamat a ON k.id_alamat = a.id_alamat " +
+                               "WHERE k.is_active = TRUE " +
                                "ORDER BY k.id_kelompoktani ASC";
 
                 using (var conn = new NpgsqlConnection(connectionString))
@@ -86,7 +87,7 @@ namespace PROJEK_AKHIR
             {
                 conn.Open();
 
-                string query = "SELECT nama_alat, jumlah, gambar_alat FROM alat";
+                string query = "SELECT nama_alat, jumlah, gambar_alat FROM alat WHERE is_active = TRUE";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -215,9 +216,18 @@ namespace PROJEK_AKHIR
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                string queryPinjam = "INSERT INTO pinjam (id_kelompoktani, tanggal_pinjam, tenggat_pinjam, id_status, id_admin) " +
-                                     "VALUES ((SELECT id_kelompoktani FROM kelompok_tani WHERE nama_kelompoktani = @namaKelompokTani), " +
-                                     "@tanggalPinjam, @tenggatPinjam, (SELECT id_status FROM status WHERE deskripsi = 'Dipinjam'), @idAdmin) RETURNING id_pinjam";
+                string queryPinjam = @"
+            INSERT INTO pinjam (id_kelompoktani, tanggal_pinjam, tenggat_pinjam, id_status, id_admin) 
+            VALUES (
+                (SELECT id_kelompoktani 
+                 FROM kelompok_tani 
+                 WHERE nama_kelompoktani = @namaKelompokTani 
+                 LIMIT 1), 
+                @tanggalPinjam, 
+                @tenggatPinjam, 
+                (SELECT id_status FROM status WHERE deskripsi = 'Dipinjam'), 
+                @idAdmin) 
+            RETURNING id_pinjam";
 
                 using (var cmdPinjam = new NpgsqlCommand(queryPinjam, conn))
                 {
@@ -262,6 +272,7 @@ namespace PROJEK_AKHIR
         }
 
 
+
         public class Alat
         {
             public string Nama { get; set; }
@@ -304,6 +315,63 @@ namespace PROJEK_AKHIR
             txtJumlahAlat.Clear();
             txtTanggalPinjam.Clear();
             txtTenggatPinjam.Clear();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
+        }
+
+        private void btnPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdminn = new FormAdmin();
+            formAdminn.Show();
+        }
+
+
+        private void btnKelompoktani_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
+            formInformasiAlat.Show();
+        }
+
+        private void btnPengembalian_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLaporan formLaporan = new FormLaporan();
+            formLaporan.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
     }
 }
