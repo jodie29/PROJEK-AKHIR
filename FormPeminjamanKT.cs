@@ -13,7 +13,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormPeminjamanKT : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
         private BindingList<Alat> alatList = new BindingList<Alat>();
 
         public FormPeminjamanKT()

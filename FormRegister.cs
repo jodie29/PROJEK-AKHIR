@@ -71,7 +71,7 @@ namespace PROJEK_AKHIR
 
         private string GetLastAdminId()
         {
-            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             string lastId = null;
 
             string query = "SELECT id_admin FROM admin WHERE id_admin LIKE 'adm%' ORDER BY CAST(SUBSTRING(id_admin FROM 4) AS INT) DESC LIMIT 1";
@@ -165,6 +165,13 @@ namespace PROJEK_AKHIR
         private void FormRegister_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FromLogin formLogin = new FromLogin();
+            formLogin.Show();
         }
     }
 }

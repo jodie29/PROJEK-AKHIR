@@ -22,7 +22,7 @@ namespace PROJEK_AKHIR
 
         private void LoadDataFromDatabase()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
@@ -54,7 +54,7 @@ namespace PROJEK_AKHIR
 
         private void SoftDeleteAlatFromDatabase(Alat alat)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
@@ -152,11 +152,6 @@ namespace PROJEK_AKHIR
             FormTambahAlat formTambahAlat = new FormTambahAlat();
             formTambahAlat.ShowDialog();
             UpdateFlowLayoutPanel();
-        }
-
-        private void FormInformasiAlat_Load(object sender, EventArgs e)
-        {
-            LoadDataFromDatabase();  
         }
 
         private void btnHome_Click(object sender, EventArgs e)
