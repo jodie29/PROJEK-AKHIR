@@ -324,21 +324,6 @@ namespace PROJEK_AKHIR
             formHome.Show();
         }
 
-        private void btnPeminjaman_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormAdmin formAdminn = new FormAdmin();
-            formAdminn.Show();
-        }
-
-
-        private void btnKelompoktani_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormKelompokTani formKelomppokTani = new FormKelompokTani();
-            formKelomppokTani.Show();
-        }
-
         private void btnInformasiAlat_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -372,6 +357,20 @@ namespace PROJEK_AKHIR
             this.Hide();
             FormHome formHome = new FormHome();
             formHome.Show();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdminn = new FormAdmin();
+            formAdminn.Show();
+        }
+
+        private void btnKelompokTani_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
         }
     }
 }

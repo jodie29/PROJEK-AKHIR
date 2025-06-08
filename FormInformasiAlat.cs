@@ -209,6 +209,7 @@ namespace PROJEK_AKHIR
             FormHome formHome = new FormHome();
             formHome.Show();
         }
+
     }
 
     public class Alat

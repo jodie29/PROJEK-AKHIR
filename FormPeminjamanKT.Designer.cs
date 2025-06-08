@@ -66,6 +66,7 @@
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 76;
+            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -94,6 +95,7 @@
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnPeminjaman
             // 
@@ -108,7 +110,6 @@
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
-            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnKelompokTani
             // 
@@ -123,6 +124,7 @@
             this.btnKelompokTani.Text = "Kelompok Tani";
             this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnKelompokTani.UseVisualStyleBackColor = false;
+            this.btnKelompokTani.Click += new System.EventHandler(this.btnKelompokTani_Click_1);
             // 
             // btnInformasiAlat
             // 
@@ -360,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjaman;
+            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.BGPeminjaman;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.btnTambahPinjam);
