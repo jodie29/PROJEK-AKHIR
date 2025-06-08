@@ -505,10 +505,9 @@ namespace PROJEK_AKHIR
 
         private void BttnTambah_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value != null &&
-                !string.IsNullOrWhiteSpace(dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value.ToString()))
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Selected)
             {
-                MessageBox.Show("Anda sedang dalam mode edit. Silakan gunakan tombol 'Edit' untuk menyimpan perubahan atau tombol 'Bersihkan Form' untuk menambahkan data baru.", "Mode Edit Aktif", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Anda sedang dalam mode edit. Untuk menambahkan data baru, silakan bersihkan form terlebih dahulu atau pastikan tidak ada data yang terpilih di tabel.", "Mode Edit Aktif", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -603,4 +602,3 @@ namespace PROJEK_AKHIR
         }
     }
 }
-
