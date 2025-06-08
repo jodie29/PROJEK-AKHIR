@@ -66,6 +66,7 @@
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 76;
+            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -94,6 +95,7 @@
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnPeminjaman
             // 
@@ -123,6 +125,7 @@
             this.btnKelompokTani.Text = "Kelompok Tani";
             this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnKelompokTani.UseVisualStyleBackColor = false;
+            this.btnKelompokTani.Click += new System.EventHandler(this.btnKelompokTani_Click_1);
             // 
             // btnInformasiAlat
             // 
