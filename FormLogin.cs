@@ -17,7 +17,7 @@ namespace PROJEK_AKHIR
         public bool Validate(string username, string password, out string userId)
         {
             userId = null;
-            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
             string query = "SELECT id_admin FROM admin WHERE username = @username AND password = @password";
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))
             {

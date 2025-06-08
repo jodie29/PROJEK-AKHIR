@@ -7,7 +7,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormLaporan : Form
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
 
         public FormLaporan()
         {
@@ -79,101 +79,60 @@ namespace PROJEK_AKHIR
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormHome formHome = new FormHome();
-            formHome.Show();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormAdmin formAdmin = new FormAdmin();
-            formAdmin.Show();
-        }
-
-        private void btnKelompokTani_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormKelompokTani formKelomppokTani = new FormKelompokTani();
-            formKelomppokTani.Show();
-        }
-
-        private void btnPeminjaman_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormPeminjaman formPeminjaman = new FormPeminjaman();
-            formPeminjaman.Show();
-        }
-
-        private void btnPengembalian_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormPenggembalian formPenggembalian = new FormPenggembalian();
-            formPenggembalian.Show();
-        }
-
-        private void btnRiwayat_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormRiwayat formRiwayat = new FormRiwayat();
-            formRiwayat.Show();
-        }
-
-
-        private void btnInformasiAlat_Click(object sender, EventArgs e)
+        private void btnInformasiAlat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             FormInformasiAlat formInformasiAlat = new FormInformasiAlat();
             formInformasiAlat.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnKelompokTani_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
+        }
+
+        private void btnRiwayat_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRiwayat formRiwayat = new FormRiwayat();
+            formRiwayat.Show();
+        }
+
+        private void btnPengembalian_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPenggembalian formPenggembalian = new FormPenggembalian();
+            formPenggembalian.Show();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             FormHome formHome = new FormHome();
             formHome.Show();
         }
 
-        private void FormLaporan_Load(object sender, EventArgs e)
+        private void btnPeminjaman_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormPeminjaman formPeminjaman = new FormPeminjaman();
+            formPeminjaman.Show();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btnAdmin_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
         }
 
-        private void label9_Click_1(object sender, EventArgs e)
+        private void btnHome_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            FormHome formHome = new FormHome();
+            formHome.Show();
         }
     }
 }

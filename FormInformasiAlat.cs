@@ -22,7 +22,7 @@ namespace PROJEK_AKHIR
 
         private void LoadDataFromDatabase()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
@@ -54,7 +54,7 @@ namespace PROJEK_AKHIR
 
         private void SoftDeleteAlatFromDatabase(Alat alat)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();

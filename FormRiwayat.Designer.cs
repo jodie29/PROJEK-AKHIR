@@ -130,19 +130,20 @@
             this.btnKelompokTani.Text = "Kelompok Tani";
             this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnKelompokTani.UseVisualStyleBackColor = false;
+            this.btnKelompokTani.Click += new System.EventHandler(this.btnKelompokTani_Click_1);
             // 
             // btnRiwayat
             // 
-            this.btnRiwayat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRiwayat.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiwayat.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRiwayat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRiwayat.Location = new System.Drawing.Point(25, 363);
             this.btnRiwayat.Name = "btnRiwayat";
             this.btnRiwayat.Size = new System.Drawing.Size(178, 36);
             this.btnRiwayat.TabIndex = 93;
             this.btnRiwayat.Text = "Riwayat";
-            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRiwayat.UseVisualStyleBackColor = false;
             // 
             // btnPengembalian
@@ -192,16 +193,16 @@
             // 
             // btnLaporan
             // 
-            this.btnLaporan.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnLaporan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaporan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporan.ForeColor = System.Drawing.Color.DimGray;
             this.btnLaporan.Location = new System.Drawing.Point(25, 400);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(178, 36);
             this.btnLaporan.TabIndex = 89;
             this.btnLaporan.Text = "Laporan";
-            this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLaporan.UseVisualStyleBackColor = false;
             this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
@@ -218,6 +219,7 @@
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnHome
             // 

@@ -14,7 +14,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormKelompokTaniEdit : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
 
         private string originalNama = "";
         private string originalNik = "";
@@ -375,7 +375,7 @@ namespace PROJEK_AKHIR
                         int count = Convert.ToInt32(cekCmd.ExecuteScalar());
                         if (count > 0)
                         {
-                            MessageBox.Show("Perubahan yang Anda lakukan akan menghasilkan duplikasi dengan data kelompok tani lain yang sudah ada.", "Duplikasi Terdeteksi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Perubahan ini menghasilkan duplikasi dengan data yang sudah ada.", "Duplikasi Terdeteksi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                     }
@@ -585,14 +585,14 @@ namespace PROJEK_AKHIR
                         insertCmd.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("✅ Data berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     TampilkanKelompokTani();
                     KondisiAwal();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("❌ Terjadi kesalahan saat menambahkan data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Terjadi kesalahan saat menambahkan data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
