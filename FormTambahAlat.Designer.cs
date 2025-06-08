@@ -44,10 +44,9 @@
             // txtNamaAlat
             // 
             this.txtNamaAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaAlat.Location = new System.Drawing.Point(373, 191);
-            this.txtNamaAlat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamaAlat.Location = new System.Drawing.Point(560, 294);
             this.txtNamaAlat.Name = "txtNamaAlat";
-            this.txtNamaAlat.Size = new System.Drawing.Size(208, 24);
+            this.txtNamaAlat.Size = new System.Drawing.Size(310, 33);
             this.txtNamaAlat.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -59,10 +58,9 @@
             // txtJumlahAlat
             // 
             this.txtJumlahAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJumlahAlat.Location = new System.Drawing.Point(373, 262);
-            this.txtJumlahAlat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJumlahAlat.Location = new System.Drawing.Point(560, 403);
             this.txtJumlahAlat.Name = "txtJumlahAlat";
-            this.txtJumlahAlat.Size = new System.Drawing.Size(208, 24);
+            this.txtJumlahAlat.Size = new System.Drawing.Size(310, 33);
             this.txtJumlahAlat.TabIndex = 2;
             // 
             // label1
@@ -70,10 +68,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(372, 168);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(558, 258);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(133, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nama Alat";
             // 
@@ -82,10 +79,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(374, 240);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(561, 369);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(96, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Jumlah";
             // 
@@ -95,10 +91,9 @@
             this.btnPilihGambar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPilihGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPilihGambar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPilihGambar.Location = new System.Drawing.Point(79, 311);
-            this.btnPilihGambar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPilihGambar.Location = new System.Drawing.Point(118, 478);
             this.btnPilihGambar.Name = "btnPilihGambar";
-            this.btnPilihGambar.Size = new System.Drawing.Size(199, 45);
+            this.btnPilihGambar.Size = new System.Drawing.Size(298, 69);
             this.btnPilihGambar.TabIndex = 5;
             this.btnPilihGambar.Text = "Pilih Gambar";
             this.btnPilihGambar.UseVisualStyleBackColor = false;
@@ -111,10 +106,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(378, 316);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(567, 486);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 29);
+            this.button2.Size = new System.Drawing.Size(130, 45);
             this.button2.TabIndex = 6;
             this.button2.Text = "Batal";
             this.button2.UseVisualStyleBackColor = false;
@@ -127,10 +121,9 @@
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTambah.Location = new System.Drawing.Point(483, 316);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambah.Location = new System.Drawing.Point(724, 486);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(87, 29);
+            this.btnTambah.Size = new System.Drawing.Size(130, 45);
             this.btnTambah.TabIndex = 7;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -138,24 +131,22 @@
             // 
             // pictureBoxAlat
             // 
-            this.pictureBoxAlat.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBoxAlat.BackColor = System.Drawing.Color.White;
             this.pictureBoxAlat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAlat.Location = new System.Drawing.Point(99, 133);
-            this.pictureBoxAlat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxAlat.Location = new System.Drawing.Point(148, 205);
             this.pictureBoxAlat.Name = "pictureBoxAlat";
-            this.pictureBoxAlat.Size = new System.Drawing.Size(163, 163);
+            this.pictureBoxAlat.Size = new System.Drawing.Size(244, 251);
             this.pictureBoxAlat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlat.TabIndex = 8;
             this.pictureBoxAlat.TabStop = false;
-
             // 
             // FormTambahAlat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Informasi_Alat__5_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(718, 511);
+            this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.pictureBoxAlat);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.button2);
@@ -166,7 +157,6 @@
             this.Controls.Add(this.txtNamaAlat);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTambahAlat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTambahAlat";

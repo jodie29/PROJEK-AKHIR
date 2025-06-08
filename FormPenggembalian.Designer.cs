@@ -58,21 +58,21 @@
             this.dtGridPengembalian.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtGridPengembalian.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtGridPengembalian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridPengembalian.Location = new System.Drawing.Point(194, 122);
-            this.dtGridPengembalian.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtGridPengembalian.Location = new System.Drawing.Point(291, 188);
             this.dtGridPengembalian.Name = "dtGridPengembalian";
             this.dtGridPengembalian.RowHeadersWidth = 62;
             this.dtGridPengembalian.RowTemplate.Height = 28;
-            this.dtGridPengembalian.Size = new System.Drawing.Size(507, 196);
+            this.dtGridPengembalian.Size = new System.Drawing.Size(760, 302);
             this.dtGridPengembalian.TabIndex = 0;
             // 
             // txtNamaKelompokTani
             // 
             this.txtNamaKelompokTani.BackColor = System.Drawing.SystemColors.Window;
             this.txtNamaKelompokTani.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaKelompokTani.Location = new System.Drawing.Point(349, 337);
+            this.txtNamaKelompokTani.Location = new System.Drawing.Point(524, 518);
+            this.txtNamaKelompokTani.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNamaKelompokTani.Name = "txtNamaKelompokTani";
-            this.txtNamaKelompokTani.Size = new System.Drawing.Size(161, 20);
+            this.txtNamaKelompokTani.Size = new System.Drawing.Size(240, 26);
             this.txtNamaKelompokTani.TabIndex = 59;
             // 
             // label4
@@ -80,9 +80,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Window;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.label4.Location = new System.Drawing.Point(206, 339);
+            this.label4.Location = new System.Drawing.Point(309, 522);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 15);
+            this.label4.Size = new System.Drawing.Size(202, 20);
             this.label4.TabIndex = 58;
             this.label4.Text = "Nama Peminjam             :";
             // 
@@ -90,9 +91,10 @@
             // 
             this.txtTanggalKembali.BackColor = System.Drawing.SystemColors.Window;
             this.txtTanggalKembali.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTanggalKembali.Location = new System.Drawing.Point(349, 366);
+            this.txtTanggalKembali.Location = new System.Drawing.Point(524, 563);
+            this.txtTanggalKembali.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTanggalKembali.Name = "txtTanggalKembali";
-            this.txtTanggalKembali.Size = new System.Drawing.Size(161, 20);
+            this.txtTanggalKembali.Size = new System.Drawing.Size(240, 26);
             this.txtTanggalKembali.TabIndex = 61;
             // 
             // label1
@@ -100,9 +102,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.label1.Location = new System.Drawing.Point(206, 368);
+            this.label1.Location = new System.Drawing.Point(309, 566);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 15);
+            this.label1.Size = new System.Drawing.Size(203, 20);
             this.label1.TabIndex = 60;
             this.label1.Text = "Tanggal Kembali             :";
             // 
@@ -110,9 +113,10 @@
             // 
             this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
             this.txtStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStatus.Location = new System.Drawing.Point(349, 397);
+            this.txtStatus.Location = new System.Drawing.Point(524, 611);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(161, 20);
+            this.txtStatus.Size = new System.Drawing.Size(240, 26);
             this.txtStatus.TabIndex = 63;
             // 
             // label2
@@ -120,18 +124,18 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Window;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.label2.Location = new System.Drawing.Point(206, 399);
+            this.label2.Location = new System.Drawing.Point(309, 614);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 15);
+            this.label2.Size = new System.Drawing.Size(202, 20);
             this.label2.TabIndex = 62;
             this.label2.Text = "Status                            :";
             // 
             // btnKembalikan
             // 
-            this.btnKembalikan.Location = new System.Drawing.Point(589, 408);
-            this.btnKembalikan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKembalikan.Location = new System.Drawing.Point(884, 628);
             this.btnKembalikan.Name = "btnKembalikan";
-            this.btnKembalikan.Size = new System.Drawing.Size(94, 23);
+            this.btnKembalikan.Size = new System.Drawing.Size(141, 35);
             this.btnKembalikan.TabIndex = 64;
             this.btnKembalikan.Text = "Kembalikan";
             this.btnKembalikan.UseVisualStyleBackColor = true;
@@ -142,9 +146,10 @@
             this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(194, 88);
+            this.txtSearch.Location = new System.Drawing.Point(291, 135);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(173, 24);
+            this.txtSearch.Size = new System.Drawing.Size(258, 32);
             this.txtSearch.TabIndex = 66;
             // 
             // label3
@@ -152,9 +157,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Window;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.label3.Location = new System.Drawing.Point(206, 92);
+            this.label3.Location = new System.Drawing.Point(309, 142);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 65;
             // 
             // pictureBox1
@@ -162,10 +168,9 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Vector;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(345, 90);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(518, 138);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
             // 
@@ -175,10 +180,9 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
-            this.btnExit.Location = new System.Drawing.Point(17, 284);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(26, 437);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(119, 23);
+            this.btnExit.Size = new System.Drawing.Size(178, 35);
             this.btnExit.TabIndex = 95;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -191,14 +195,14 @@
             this.btnKelompokTani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKelompokTani.ForeColor = System.Drawing.Color.DimGray;
-            this.btnKelompokTani.Location = new System.Drawing.Point(17, 139);
-            this.btnKelompokTani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKelompokTani.Location = new System.Drawing.Point(26, 214);
             this.btnKelompokTani.Name = "btnKelompokTani";
-            this.btnKelompokTani.Size = new System.Drawing.Size(119, 23);
+            this.btnKelompokTani.Size = new System.Drawing.Size(178, 35);
             this.btnKelompokTani.TabIndex = 94;
             this.btnKelompokTani.Text = "Kelompok Tani";
             this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnKelompokTani.UseVisualStyleBackColor = false;
+            this.btnKelompokTani.Click += new System.EventHandler(this.btnKelompokTani_Click_1);
             // 
             // btnRiwayat
             // 
@@ -206,10 +210,9 @@
             this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRiwayat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRiwayat.Location = new System.Drawing.Point(17, 236);
-            this.btnRiwayat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRiwayat.Location = new System.Drawing.Point(26, 363);
             this.btnRiwayat.Name = "btnRiwayat";
-            this.btnRiwayat.Size = new System.Drawing.Size(119, 23);
+            this.btnRiwayat.Size = new System.Drawing.Size(178, 35);
             this.btnRiwayat.TabIndex = 93;
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -222,10 +225,9 @@
             this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporan.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLaporan.Location = new System.Drawing.Point(17, 260);
-            this.btnLaporan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLaporan.Location = new System.Drawing.Point(26, 400);
             this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Size = new System.Drawing.Size(119, 23);
+            this.btnLaporan.Size = new System.Drawing.Size(178, 35);
             this.btnLaporan.TabIndex = 92;
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -238,10 +240,9 @@
             this.btnInformasiAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformasiAlat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInformasiAlat.Location = new System.Drawing.Point(17, 164);
-            this.btnInformasiAlat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInformasiAlat.Location = new System.Drawing.Point(26, 252);
             this.btnInformasiAlat.Name = "btnInformasiAlat";
-            this.btnInformasiAlat.Size = new System.Drawing.Size(119, 23);
+            this.btnInformasiAlat.Size = new System.Drawing.Size(178, 35);
             this.btnInformasiAlat.TabIndex = 91;
             this.btnInformasiAlat.Text = "Informasi Alat";
             this.btnInformasiAlat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -254,10 +255,9 @@
             this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeminjaman.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPeminjaman.Location = new System.Drawing.Point(17, 188);
-            this.btnPeminjaman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPeminjaman.Location = new System.Drawing.Point(26, 289);
             this.btnPeminjaman.Name = "btnPeminjaman";
-            this.btnPeminjaman.Size = new System.Drawing.Size(119, 23);
+            this.btnPeminjaman.Size = new System.Drawing.Size(178, 35);
             this.btnPeminjaman.TabIndex = 90;
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -270,10 +270,9 @@
             this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengembalian.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPengembalian.Location = new System.Drawing.Point(17, 212);
-            this.btnPengembalian.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPengembalian.Location = new System.Drawing.Point(26, 326);
             this.btnPengembalian.Name = "btnPengembalian";
-            this.btnPengembalian.Size = new System.Drawing.Size(119, 23);
+            this.btnPengembalian.Size = new System.Drawing.Size(178, 35);
             this.btnPengembalian.TabIndex = 89;
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -285,14 +284,14 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAdmin.Location = new System.Drawing.Point(17, 115);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmin.Location = new System.Drawing.Point(26, 177);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(119, 23);
+            this.btnAdmin.Size = new System.Drawing.Size(178, 35);
             this.btnAdmin.TabIndex = 88;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnHome
             // 
@@ -300,10 +299,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHome.Location = new System.Drawing.Point(17, 90);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Location = new System.Drawing.Point(26, 138);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(119, 23);
+            this.btnHome.Size = new System.Drawing.Size(178, 35);
             this.btnHome.TabIndex = 87;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -315,18 +313,19 @@
             this.Admin.AutoSize = true;
             this.Admin.BackColor = System.Drawing.SystemColors.Control;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(30, 120);
+            this.Admin.Location = new System.Drawing.Point(45, 185);
+            this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(0, 15);
+            this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 86;
             // 
             // FormPenggembalian
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Pengembalian;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(718, 511);
+            this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnKelompokTani);
             this.Controls.Add(this.btnRiwayat);
@@ -350,8 +349,8 @@
             this.Controls.Add(this.dtGridPengembalian);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormPenggembalian";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPenggembalian";
             ((System.ComponentModel.ISupportInitialize)(this.dtGridPengembalian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

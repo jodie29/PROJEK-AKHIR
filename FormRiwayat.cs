@@ -7,7 +7,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormRiwayat : Form
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
         private int idPinjamDipilih = -1;
 
         public FormRiwayat()
@@ -117,14 +117,6 @@ namespace PROJEK_AKHIR
             formAdminn.Show();
         }
 
-
-        private void btnKelompoktani_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormKelompokTani formKelomppokTani = new FormKelompokTani();
-            formKelomppokTani.Show();
-        }
-
         private void btnInformasiAlat_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -159,6 +151,20 @@ namespace PROJEK_AKHIR
             this.Hide();
             FormPeminjaman formPeminjaman = new FormPeminjaman();
             formPeminjaman.Show();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
+        }
+
+        private void btnKelompokTani_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKelompokTani formKelomppokTani = new FormKelompokTani();
+            formKelomppokTani.Show();
         }
     }
 }
