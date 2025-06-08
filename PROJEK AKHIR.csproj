@@ -416,5 +416,14 @@
   <ItemGroup>
     <None Include="Resources\Vector1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGInfoAlat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGKelompok Tani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGPeminjaman.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

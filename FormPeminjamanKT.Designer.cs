@@ -110,7 +110,6 @@
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPeminjaman.UseVisualStyleBackColor = false;
-            this.btnPeminjaman.Click += new System.EventHandler(this.btnPeminjaman_Click);
             // 
             // btnKelompokTani
             // 
@@ -363,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Peminjaman;
+            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.BGPeminjaman;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.btnTambahPinjam);

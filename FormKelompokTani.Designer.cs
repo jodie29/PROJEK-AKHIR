@@ -57,9 +57,10 @@
             // 
             this.btnDelete.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Hapus;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.Location = new System.Drawing.Point(661, 86);
+            this.btnDelete.Location = new System.Drawing.Point(992, 132);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(25, 20);
+            this.btnDelete.Size = new System.Drawing.Size(38, 31);
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDelete.TabIndex = 30;
             this.btnDelete.TabStop = false;
@@ -69,9 +70,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Bttn_Edit;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(945, 132);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -80,40 +82,36 @@
             // LblJam
             // 
             this.LblJam.AutoSize = true;
-            this.LblJam.Location = new System.Drawing.Point(351, 88);
-            this.LblJam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblJam.Location = new System.Drawing.Point(526, 135);
             this.LblJam.Name = "LblJam";
-            this.LblJam.Size = new System.Drawing.Size(26, 13);
+            this.LblJam.Size = new System.Drawing.Size(39, 20);
             this.LblJam.TabIndex = 36;
             this.LblJam.Text = "Jam";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(471, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 35;
             this.label2.Text = "Jam :";
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(195, 88);
-            this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label1.Location = new System.Drawing.Point(292, 135);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(52, 13);
+            this.Label1.Size = new System.Drawing.Size(74, 20);
             this.Label1.TabIndex = 34;
             this.Label1.Text = "Tanggal :";
             // 
             // LblTanggal
             // 
             this.LblTanggal.AutoSize = true;
-            this.LblTanggal.Location = new System.Drawing.Point(250, 88);
-            this.LblTanggal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTanggal.Location = new System.Drawing.Point(375, 135);
             this.LblTanggal.Name = "LblTanggal";
-            this.LblTanggal.Size = new System.Drawing.Size(46, 13);
+            this.LblTanggal.Size = new System.Drawing.Size(66, 20);
             this.LblTanggal.TabIndex = 33;
             this.LblTanggal.Text = "Tanggal";
             // 
@@ -122,12 +120,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(193, 114);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(290, 175);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(768, 506);
             this.dataGridView1.TabIndex = 32;
             // 
             // timer1
@@ -140,10 +137,9 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
-            this.btnExit.Location = new System.Drawing.Point(17, 287);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(26, 442);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(119, 23);
+            this.btnExit.Size = new System.Drawing.Size(178, 35);
             this.btnExit.TabIndex = 86;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -156,10 +152,9 @@
             this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporan.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLaporan.Location = new System.Drawing.Point(17, 262);
-            this.btnLaporan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLaporan.Location = new System.Drawing.Point(26, 403);
             this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Size = new System.Drawing.Size(119, 23);
+            this.btnLaporan.Size = new System.Drawing.Size(178, 35);
             this.btnLaporan.TabIndex = 85;
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -172,10 +167,9 @@
             this.btnRiwayat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRiwayat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRiwayat.Location = new System.Drawing.Point(17, 237);
-            this.btnRiwayat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRiwayat.Location = new System.Drawing.Point(26, 365);
             this.btnRiwayat.Name = "btnRiwayat";
-            this.btnRiwayat.Size = new System.Drawing.Size(119, 23);
+            this.btnRiwayat.Size = new System.Drawing.Size(178, 35);
             this.btnRiwayat.TabIndex = 84;
             this.btnRiwayat.Text = "Riwayat";
             this.btnRiwayat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -188,10 +182,9 @@
             this.btnPengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPengembalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengembalian.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPengembalian.Location = new System.Drawing.Point(17, 213);
-            this.btnPengembalian.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPengembalian.Location = new System.Drawing.Point(26, 328);
             this.btnPengembalian.Name = "btnPengembalian";
-            this.btnPengembalian.Size = new System.Drawing.Size(119, 23);
+            this.btnPengembalian.Size = new System.Drawing.Size(178, 35);
             this.btnPengembalian.TabIndex = 83;
             this.btnPengembalian.Text = "Pengembalian";
             this.btnPengembalian.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -204,10 +197,9 @@
             this.btnInformasiAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformasiAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformasiAlat.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInformasiAlat.Location = new System.Drawing.Point(17, 164);
-            this.btnInformasiAlat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInformasiAlat.Location = new System.Drawing.Point(26, 252);
             this.btnInformasiAlat.Name = "btnInformasiAlat";
-            this.btnInformasiAlat.Size = new System.Drawing.Size(119, 23);
+            this.btnInformasiAlat.Size = new System.Drawing.Size(178, 35);
             this.btnInformasiAlat.TabIndex = 82;
             this.btnInformasiAlat.Text = "Informasi Alat";
             this.btnInformasiAlat.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -220,10 +212,9 @@
             this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeminjaman.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPeminjaman.Location = new System.Drawing.Point(17, 188);
-            this.btnPeminjaman.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPeminjaman.Location = new System.Drawing.Point(26, 289);
             this.btnPeminjaman.Name = "btnPeminjaman";
-            this.btnPeminjaman.Size = new System.Drawing.Size(119, 23);
+            this.btnPeminjaman.Size = new System.Drawing.Size(178, 35);
             this.btnPeminjaman.TabIndex = 81;
             this.btnPeminjaman.Text = "Peminjaman";
             this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -236,10 +227,9 @@
             this.btnKelompokTani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKelompokTani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKelompokTani.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKelompokTani.Location = new System.Drawing.Point(17, 139);
-            this.btnKelompokTani.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKelompokTani.Location = new System.Drawing.Point(26, 214);
             this.btnKelompokTani.Name = "btnKelompokTani";
-            this.btnKelompokTani.Size = new System.Drawing.Size(119, 23);
+            this.btnKelompokTani.Size = new System.Drawing.Size(178, 35);
             this.btnKelompokTani.TabIndex = 80;
             this.btnKelompokTani.Text = "Kelompok Tani";
             this.btnKelompokTani.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -251,10 +241,9 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAdmin.Location = new System.Drawing.Point(17, 114);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdmin.Location = new System.Drawing.Point(26, 175);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(119, 23);
+            this.btnAdmin.Size = new System.Drawing.Size(178, 35);
             this.btnAdmin.TabIndex = 79;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -267,10 +256,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHome.Location = new System.Drawing.Point(17, 90);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(26, 138);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(119, 23);
+            this.btnHome.Size = new System.Drawing.Size(178, 35);
             this.btnHome.TabIndex = 78;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -282,28 +270,30 @@
             this.Admin.AutoSize = true;
             this.Admin.BackColor = System.Drawing.SystemColors.Control;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(30, 124);
+            this.Admin.Location = new System.Drawing.Point(45, 191);
+            this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(0, 15);
+            this.Admin.Size = new System.Drawing.Size(0, 22);
             this.Admin.TabIndex = 77;
             // 
             // Home
             // 
             this.Home.AutoSize = true;
             this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(30, 93);
+            this.Home.Location = new System.Drawing.Point(45, 143);
+            this.Home.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(41, 15);
+            this.Home.Size = new System.Drawing.Size(57, 22);
             this.Home.TabIndex = 76;
             this.Home.Text = "Home";
             // 
             // FormKelompokTani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Kelompok_Tani2;
+            this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.BGKelompok_Tani;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(718, 511);
+            this.ClientSize = new System.Drawing.Size(1077, 786);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLaporan);
             this.Controls.Add(this.btnRiwayat);
@@ -324,7 +314,6 @@
             this.Controls.Add(this.btnDelete);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKelompokTani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKelomppokTani";

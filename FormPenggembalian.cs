@@ -88,6 +88,8 @@ namespace PROJEK_AKHIR
 
                 txtNamaKelompokTani.Text = namaKelompokTani;
                 txtTanggalKembali.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                txtStatus.Text = status;
+
                 if (status != "Dikembalikan" && string.IsNullOrEmpty(tanggalKembali))
                 {
                     btnKembalikan.Enabled = true;

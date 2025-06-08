@@ -73,6 +73,36 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BGInfoAlat {
+            get {
+                object obj = ResourceManager.GetObject("BGInfoAlat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BGKelompok_Tani {
+            get {
+                object obj = ResourceManager.GetObject("BGKelompok Tani", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BGPeminjaman {
+            get {
+                object obj = ResourceManager.GetObject("BGPeminjaman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bttn_Edit {
             get {
                 object obj = ResourceManager.GetObject("Bttn Edit", resourceCulture);
