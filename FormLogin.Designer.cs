@@ -36,13 +36,13 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnlogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnlogin.Location = new System.Drawing.Point(42, 398);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnlogin.ForeColor = System.Drawing.Color.White;
+            this.btnlogin.Location = new System.Drawing.Point(28, 259);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(333, 43);
+            this.btnlogin.Size = new System.Drawing.Size(222, 28);
             this.btnlogin.TabIndex = 0;
             this.btnlogin.Text = "Login";
             this.btnlogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -51,28 +51,27 @@
             // 
             // tbusername
             // 
-            this.tbusername.Location = new System.Drawing.Point(42, 277);
-            this.tbusername.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tbusername.Location = new System.Drawing.Point(28, 180);
+            this.tbusername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbusername.Name = "tbusername";
-            this.tbusername.Size = new System.Drawing.Size(331, 26);
+            this.tbusername.Size = new System.Drawing.Size(222, 20);
             this.tbusername.TabIndex = 1;
             // 
             // tbpassword
             // 
-            this.tbpassword.Location = new System.Drawing.Point(42, 355);
-            this.tbpassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tbpassword.Location = new System.Drawing.Point(28, 231);
+            this.tbpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpassword.Name = "tbpassword";
-            this.tbpassword.Size = new System.Drawing.Size(331, 26);
+            this.tbpassword.Size = new System.Drawing.Size(222, 20);
             this.tbpassword.TabIndex = 2;
             // 
             // lilaregister
             // 
             this.lilaregister.AutoSize = true;
             this.lilaregister.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lilaregister.Location = new System.Drawing.Point(38, 455);
-            this.lilaregister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lilaregister.Location = new System.Drawing.Point(25, 296);
             this.lilaregister.Name = "lilaregister";
-            this.lilaregister.Size = new System.Drawing.Size(71, 17);
+            this.lilaregister.Size = new System.Drawing.Size(47, 12);
             this.lilaregister.TabIndex = 4;
             this.lilaregister.TabStop = true;
             this.lilaregister.Text = "Registrasi";
@@ -80,18 +79,18 @@
             // 
             // FromLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJEK_AKHIR.Properties.Resources.Login1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1077, 786);
+            this.ClientSize = new System.Drawing.Size(718, 511);
             this.Controls.Add(this.lilaregister);
             this.Controls.Add(this.tbpassword);
             this.Controls.Add(this.tbusername);
             this.Controls.Add(this.btnlogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FromLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

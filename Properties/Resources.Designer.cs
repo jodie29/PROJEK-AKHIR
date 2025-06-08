@@ -123,6 +123,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fitur_Admin__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Fitur Admin (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fitur_Home {
             get {
                 object obj = ResourceManager.GetObject("Fitur Home", resourceCulture);
@@ -203,6 +213,26 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frame_858 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 858", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_858__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 858 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap From_Admin {
             get {
                 object obj = ResourceManager.GetObject("From Admin", resourceCulture);
@@ -223,9 +253,79 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Alat_Edit {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Alat Edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Informasi_Alat_Tambah {
             get {
                 object obj = ResourceManager.GetObject("Informasi Alat Tambah", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informasi_Edit_Alat {
+            get {
+                object obj = ResourceManager.GetObject("Informasi Edit Alat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +383,16 @@ namespace PROJEK_AKHIR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Laporan {
+            get {
+                object obj = ResourceManager.GetObject("Laporan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Laporanbttn {
             get {
                 object obj = ResourceManager.GetObject("Laporanbttn", resourceCulture);
@@ -296,6 +406,16 @@ namespace PROJEK_AKHIR.Properties {
         internal static System.Drawing.Bitmap Log_Outbttn {
             get {
                 object obj = ResourceManager.GetObject("Log Outbttn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_Outbttn1 {
+            get {
+                object obj = ResourceManager.GetObject("Log Outbttn1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

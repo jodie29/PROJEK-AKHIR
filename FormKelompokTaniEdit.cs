@@ -12,9 +12,21 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PROJEK_AKHIR
 {
-    public partial class FormKelompokTaniEdit: Form
+    public partial class FormKelompokTaniEdit : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
+
+        private string originalNama = "";
+        private string originalNik = "";
+        private string originalJumlah = "";
+        private string originalNoHp = "";
+        private string originalDeskripsiJalan = "";
+        private string originalDesa = "";
+        private string originalKecamatan = "";
+        private string originalKabupaten = "";
+        private string originalIdKelompokTani = "";
+
+
         public FormKelompokTaniEdit()
         {
             InitializeComponent();
@@ -24,6 +36,7 @@ namespace PROJEK_AKHIR
         {
 
         }
+
         void munculLevel1()
         {
             comboBox1.Items.Clear();
@@ -33,11 +46,22 @@ namespace PROJEK_AKHIR
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedItem == null)
+            {
+                comboBox2.Enabled = false;
+                comboBox3.Enabled = false;
+                comboBox2.Items.Clear();
+                comboBox3.Items.Clear();
+                return;
+            }
+
             string kabupaten = comboBox1.SelectedItem.ToString();
             LoadKecamatan(kabupaten);
 
             comboBox2.Enabled = true;
             comboBox3.Enabled = false;
+            comboBox2.Text = "";
+            comboBox3.Text = "";
         }
 
         private void LoadKecamatan(string kabupaten)
@@ -84,7 +108,6 @@ namespace PROJEK_AKHIR
             }
         }
 
-
         void KondisiAwal()
         {
             LblTanggal.Text = DateTime.Now.ToString("dd-MM-yyyy");
@@ -96,11 +119,25 @@ namespace PROJEK_AKHIR
             comboBox1.Text = "";
             comboBox2.Text = "";
             comboBox3.Text = "";
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
 
-            comboBox2.Enabled = false; 
+            comboBox2.Enabled = false;
             comboBox3.Enabled = false;
             munculLevel1();
 
+            dataGridView1.ClearSelection();
+
+            originalNama = "";
+            originalNik = "";
+            originalJumlah = "";
+            originalNoHp = "";
+            originalDeskripsiJalan = "";
+            originalDesa = "";
+            originalKecamatan = "";
+            originalKabupaten = "";
+            originalIdKelompokTani = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -122,36 +159,69 @@ namespace PROJEK_AKHIR
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null)
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value != null)
             {
-                textBox1.Text = dataGridView1.CurrentRow.Cells["nama_kelompoktani"].Value?.ToString();
-                textBox2.Text = dataGridView1.CurrentRow.Cells["nik"].Value?.ToString();
-                textBox3.Text = dataGridView1.CurrentRow.Cells["jumlah_kelompoktani"].Value?.ToString();
-                textBox4.Text = dataGridView1.CurrentRow.Cells["no_hp_kelompoktani"].Value?.ToString();
-                textBox5.Text = dataGridView1.CurrentRow.Cells["deskripsi_jalan"].Value?.ToString();
+                originalIdKelompokTani = dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value?.ToString();
+                originalNama = dataGridView1.CurrentRow.Cells["nama_kelompoktani"].Value?.ToString();
+                originalNik = dataGridView1.CurrentRow.Cells["nik"].Value?.ToString();
+                originalJumlah = dataGridView1.CurrentRow.Cells["jumlah_kelompoktani"].Value?.ToString();
+                originalNoHp = dataGridView1.CurrentRow.Cells["no_hp_kelompoktani"].Value?.ToString();
+                originalDeskripsiJalan = dataGridView1.CurrentRow.Cells["deskripsi_jalan"].Value?.ToString();
+
                 string alamatGabungan = dataGridView1.CurrentRow.Cells["alamat"].Value?.ToString();
+                if (!string.IsNullOrEmpty(alamatGabungan))
+                {
+                    string[] alamatParts = alamatGabungan.Split(',');
+                    if (alamatParts.Length >= 3)
+                    {
+                        originalDesa = alamatParts[0].Trim();
+                        originalKecamatan = alamatParts[1].Trim();
+                        originalKabupaten = alamatParts[2].Trim();
+                    }
+                }
+                else
+                {
+                    originalDesa = "";
+                    originalKecamatan = "";
+                    originalKabupaten = "";
+                }
+
+                textBox1.Text = originalNama;
+                textBox2.Text = originalNik;
+                textBox3.Text = originalJumlah;
+                textBox4.Text = originalNoHp;
+                textBox5.Text = originalDeskripsiJalan;
 
                 if (!string.IsNullOrEmpty(alamatGabungan))
                 {
                     string[] alamatParts = alamatGabungan.Split(',');
 
-                    if (alamatParts.Length == 3)
+                    if (alamatParts.Length >= 3)
                     {
                         string desa = alamatParts[0].Trim();
                         string kecamatan = alamatParts[1].Trim();
                         string kabupaten = alamatParts[2].Trim();
 
-                        comboBox1.SelectedIndex = comboBox1.FindStringExact(kabupaten);
-                        comboBox2.SelectedIndex = comboBox2.FindStringExact(kecamatan);
-                        comboBox3.SelectedIndex = comboBox3.FindStringExact(desa);
+                        comboBox1.SelectedItem = kabupaten;
+                        LoadKecamatan(kabupaten);
+                        comboBox2.SelectedItem = kecamatan;
+                        LoadDesa(kabupaten, kecamatan);
+                        comboBox3.SelectedItem = desa;
+
+                        comboBox2.Enabled = true;
+                        comboBox3.Enabled = true;
                     }
                 }
+            }
+            else
+            {
+                KondisiAwal();
             }
         }
 
         private string GenerateNewKelompokTaniId()
         {
-            string newId = "TN001"; 
+            string newId = "TN001";
 
             using (var conn = new NpgsqlConnection(connectionString))
             {
@@ -164,27 +234,28 @@ namespace PROJEK_AKHIR
                     object result = cmd.ExecuteScalar();
                     if (result != null)
                     {
-                        string lastId = result.ToString(); 
-                        string numberPart = lastId.Substring(2); 
-                        int lastNumber = int.Parse(numberPart); 
-
-                        int newNumber = lastNumber + 1;
-                        newId = "TN" + newNumber.ToString("D3"); 
+                        string lastId = result.ToString();
+                        string numberPart = lastId.Substring(2);
+                        if (int.TryParse(numberPart, out int lastNumber))
+                        {
+                            int newNumber = lastNumber + 1;
+                            newId = "TN" + newNumber.ToString("D3");
+                        }
                     }
                 }
             }
             return newId;
         }
+
         private void TampilkanKelompokTani()
         {
             try
             {
                 string query = "SELECT k.id_kelompoktani, k.nama_kelompoktani, k.nik, k.jumlah_kelompoktani, k.no_hp_kelompoktani, k.deskripsi_jalan, a.desa || ',' || a.kecamatan || ',' || a.kabupaten AS alamat " +
-               "FROM kelompok_tani k " +
-               "JOIN alamat a ON k.id_alamat = a.id_alamat " +
-               "WHERE k.is_active = TRUE " +  
-               "ORDER BY k.id_kelompoktani ASC";
-
+                               "FROM kelompok_tani k " +
+                               "JOIN alamat a ON k.id_alamat = a.id_alamat " +
+                               "WHERE k.is_active = TRUE " +
+                               "ORDER BY k.id_kelompoktani ASC";
 
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
@@ -222,123 +293,132 @@ namespace PROJEK_AKHIR
 
         private void BttnEdit_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" || comboBox1.Text.Trim() == "" || comboBox2.Text.Trim() == "" || comboBox3.Text.Trim() == "")
+            string idKelompokTaniToEdit = null;
+
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value != null)
             {
-                MessageBox.Show("Pastikan Semua Form Terisi!");
+                idKelompokTaniToEdit = dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value.ToString();
             }
             else
             {
-                try
+                MessageBox.Show("Pilih data yang ingin diubah terlebih dahulu dari tabel.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text) || comboBox1.SelectedItem == null ||
+                comboBox2.SelectedItem == null || comboBox3.SelectedItem == null)
+            {
+                MessageBox.Show("Pastikan Semua Form Terisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!long.TryParse(textBox2.Text, out _) || textBox2.Text.Length != 16)
+            {
+                MessageBox.Show("NIK harus 16 digit dan berupa angka.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!long.TryParse(textBox4.Text, out _) || textBox4.Text.Length < 10 || textBox4.Text.Length > 12)
+            {
+                MessageBox.Show("Nomor HP harus berupa angka antara 10 12 digit.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(textBox3.Text, out int jumlahKelompokTani))
+            {
+                MessageBox.Show("Jumlah Anggota harus berupa angka bulat.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            bool hasChanged =
+                textBox1.Text != originalNama ||
+                textBox2.Text != originalNik ||
+                textBox3.Text != originalJumlah ||
+                textBox4.Text != originalNoHp ||
+                textBox5.Text != originalDeskripsiJalan ||
+                (comboBox1.SelectedItem?.ToString() ?? "") != originalKabupaten ||
+                (comboBox2.SelectedItem?.ToString() ?? "") != originalKecamatan ||
+                (comboBox3.SelectedItem?.ToString() ?? "") != originalDesa;
+
+            if (!hasChanged)
+            {
+                MessageBox.Show("Tidak ada perubahan terdeteksi. Silakan ubah data sebelum menyimpan.", "Tidak Ada Perubahan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                int selectedRowIndex = dataGridView1.CurrentRow.Index;
+
+                using (var conn = new NpgsqlConnection(connectionString))
                 {
-                    string idKelompokTani = null;
-                    if (dataGridView1.CurrentRow != null)
-                        idKelompokTani = dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value.ToString();
+                    conn.Open();
 
-                    int selectedRowIndex = dataGridView1.CurrentRow.Index;
+                    string cekDuplikasiQuery = "SELECT COUNT(*) FROM kelompok_tani k " +
+                                               "JOIN alamat a ON k.id_alamat = a.id_alamat " +
+                                               "WHERE k.nama_kelompoktani = @nama " +
+                                               "AND k.nik = @nik " +
+                                               "AND a.desa = @desa AND a.kecamatan = @kecamatan AND a.kabupaten = @kabupaten " +
+                                               "AND k.id_kelompoktani <> @currentIdKelompokTani AND k.is_active = TRUE";
 
-                    string query = "UPDATE kelompok_tani SET " + "nama_kelompoktani = @nama, " + "nik = @nik, " + "jumlah_kelompoktani = @jumlah, " + "no_hp_kelompoktani = @no_hp, " + "deskripsi_jalan = @deskripsi_jalan, " + "id_alamat = (SELECT id_alamat FROM alamat WHERE desa = @desa AND kecamatan = @kecamatan AND kabupaten = @kabupaten) " + 
-                        "WHERE id_kelompoktani = @id_kelompoktani";
-
-                    using (var conn = new NpgsqlConnection(connectionString))
+                    using (var cekCmd = new NpgsqlCommand(cekDuplikasiQuery, conn))
                     {
-                        conn.Open();
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                        cekCmd.Parameters.AddWithValue("@nama", textBox1.Text);
+                        cekCmd.Parameters.AddWithValue("@nik", textBox2.Text);
+                        cekCmd.Parameters.AddWithValue("@desa", comboBox3.SelectedItem.ToString());
+                        cekCmd.Parameters.AddWithValue("@kecamatan", comboBox2.SelectedItem.ToString());
+                        cekCmd.Parameters.AddWithValue("@kabupaten", comboBox1.SelectedItem.ToString());
+                        cekCmd.Parameters.AddWithValue("@currentIdKelompokTani", idKelompokTaniToEdit);
+
+                        int count = Convert.ToInt32(cekCmd.ExecuteScalar());
+                        if (count > 0)
                         {
-                            cmd.Parameters.AddWithValue("@nama", textBox1.Text);
-                            cmd.Parameters.AddWithValue("@nik", textBox2.Text);
-
-                            int jumlahKelompokTani;
-                            if (int.TryParse(textBox3.Text, out jumlahKelompokTani))
-                            {
-                                cmd.Parameters.AddWithValue("@jumlah", jumlahKelompokTani);
-                            }
-                            else
-                            {                                
-                                MessageBox.Show("Jumlah Kelompok Tani harus berupa angka bulat.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return; 
-                            }
-                            cmd.Parameters.AddWithValue("@no_hp", textBox4.Text);
-                            cmd.Parameters.AddWithValue("@deskripsi_jalan", textBox5.Text);
-                            cmd.Parameters.AddWithValue("@kabupaten", comboBox1.Text);
-                            cmd.Parameters.AddWithValue("@kecamatan", comboBox2.Text);
-                            cmd.Parameters.AddWithValue("@desa", comboBox3.Text);
-                            cmd.Parameters.AddWithValue("@id_kelompoktani", idKelompokTani);
-
-                            cmd.ExecuteNonQuery();
-
+                            MessageBox.Show("Perubahan yang Anda lakukan akan menghasilkan duplikasi dengan data kelompok tani lain yang sudah ada.", "Duplikasi Terdeteksi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                         }
                     }
 
-                    MessageBox.Show("Data berhasil diubah!");
-                    TampilkanKelompokTani();
+                    string query = "UPDATE kelompok_tani SET " +
+                                   "nama_kelompoktani = @nama, " +
+                                   "nik = @nik, " +
+                                   "jumlah_kelompoktani = @jumlah, " +
+                                   "no_hp_kelompoktani = @no_hp, " +
+                                   "deskripsi_jalan = @deskripsi_jalan, " +
+                                   "id_alamat = (SELECT id_alamat FROM alamat WHERE desa = @desa AND kecamatan = @kecamatan AND kabupaten = @kabupaten) " +
+                                   "WHERE id_kelompoktani = @id_kelompoktani";
 
-                    if (dataGridView1.Rows.Count > selectedRowIndex)
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
-                        dataGridView1.CurrentCell = dataGridView1.Rows[selectedRowIndex].Cells[0];
-                    }
+                        cmd.Parameters.AddWithValue("@nama", textBox1.Text);
+                        cmd.Parameters.AddWithValue("@nik", textBox2.Text);
+                        cmd.Parameters.AddWithValue("@jumlah", jumlahKelompokTani);
+                        cmd.Parameters.AddWithValue("@no_hp", textBox4.Text);
+                        cmd.Parameters.AddWithValue("@deskripsi_jalan", textBox5.Text);
+                        cmd.Parameters.AddWithValue("@kabupaten", comboBox1.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@kecamatan", comboBox2.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@desa", comboBox3.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@id_kelompoktani", idKelompokTaniToEdit);
 
-                    KondisiAwal();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Terjadi kesalahan saat mengubah data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void BttnTambah_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" || comboBox1.Text.Trim() == "" || comboBox2.Text.Trim() == "" || comboBox3.Text.Trim() == "")
-            {
-                MessageBox.Show("Pastikan Semua Form Terisi!");
-            }
-            else
-            {
-                try
-                {
-                    string newKelompokTaniId = GenerateNewKelompokTaniId();
-                    string query = "INSERT INTO kelompok_tani (id_kelompoktani, nama_kelompoktani, nik, jumlah_kelompoktani, no_hp_kelompoktani, id_alamat, deskripsi_jalan) " + 
-                        "VALUES (@idKelompokTani, @nama, @nik, @jumlah, @no_hp, " + 
-                        "(SELECT id_alamat FROM alamat WHERE desa = @desa AND kecamatan = @kecamatan AND kabupaten = @kabupaten), @deskripsi_jalan)";
-
-                    using (var conn = new NpgsqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@idKelompokTani", newKelompokTaniId);
-                            cmd.Parameters.AddWithValue("@nama", textBox1.Text);
-                            cmd.Parameters.AddWithValue("@nik", textBox2.Text);
-
-                            int jumlahKelompokTani;
-                            if (int.TryParse(textBox3.Text, out jumlahKelompokTani))
-                            {
-                                cmd.Parameters.AddWithValue("@jumlah", jumlahKelompokTani);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Jumlah Kelompok Tani harus berupa angka bulat.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return; 
-                            }
-
-                            cmd.Parameters.AddWithValue("@no_hp", textBox4.Text);
-                            cmd.Parameters.AddWithValue("@deskripsi_jalan", textBox5.Text);
-                            cmd.Parameters.AddWithValue("@kabupaten", comboBox1.Text); 
-                            cmd.Parameters.AddWithValue("@kecamatan", comboBox2.Text); 
-                            cmd.Parameters.AddWithValue("@desa", comboBox3.Text);
-
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Data berhasil ditambahkan!");
-                            TampilkanKelompokTani();  
-                            KondisiAwal();  
-                        }
+                        cmd.ExecuteNonQuery();
                     }
                 }
-                catch (Exception ex)
+
+                MessageBox.Show("Data berhasil diubah!");
+                TampilkanKelompokTani();
+
+                if (dataGridView1.Rows.Count > selectedRowIndex)
                 {
-                    MessageBox.Show("Terjadi kesalahan saat menambah data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridView1.CurrentCell = dataGridView1.Rows[selectedRowIndex].Cells[0];
+                    dataGridView1.Rows[selectedRowIndex].Selected = true;
                 }
+
+                KondisiAwal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan saat mengubah data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -352,6 +432,7 @@ namespace PROJEK_AKHIR
 
             LoadDesa(kabupaten, kecamatan);
             comboBox3.Enabled = true;
+            comboBox3.Text = "";
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -416,5 +497,110 @@ namespace PROJEK_AKHIR
             FormAdmin formAdmin = new FormAdmin();
             formAdmin.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BttnTambah_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value != null &&
+                !string.IsNullOrWhiteSpace(dataGridView1.CurrentRow.Cells["id_kelompoktani"].Value.ToString()))
+            {
+                MessageBox.Show("Anda sedang dalam mode edit. Silakan gunakan tombol 'Edit' untuk menyimpan perubahan atau tombol 'Bersihkan Form' untuk menambahkan data baru.", "Mode Edit Aktif", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text) || comboBox1.SelectedItem == null ||
+                comboBox2.SelectedItem == null || comboBox3.SelectedItem == null)
+            {
+                MessageBox.Show("⚠️ Pastikan semua form telah diisi!", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!long.TryParse(textBox2.Text, out _) || textBox2.Text.Length != 16)
+            {
+                MessageBox.Show("NIK harus berupa 16 digit angka.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!long.TryParse(textBox4.Text, out _) || textBox4.Text.Length < 10 || textBox4.Text.Length > 12)
+            {
+                MessageBox.Show("Nomor HP harus berupa angka antara 10 sampai 12 digit.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(textBox3.Text, out int jumlahKelompokTani))
+            {
+                MessageBox.Show("Jumlah Anggota harus berupa angka bulat.", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var conn = new NpgsqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string cekQuery = "SELECT COUNT(*) FROM kelompok_tani k " +
+                                      "JOIN alamat a ON k.id_alamat = a.id_alamat " +
+                                      "WHERE k.nama_kelompoktani = @nama AND k.nik = @nik " +
+                                      "AND a.desa = @desa AND a.kecamatan = @kecamatan AND a.kabupaten = @kabupaten AND k.is_active = TRUE";
+
+                    using (var cekCmd = new NpgsqlCommand(cekQuery, conn))
+                    {
+                        cekCmd.Parameters.AddWithValue("@nama", textBox1.Text);
+                        cekCmd.Parameters.AddWithValue("@nik", textBox2.Text);
+                        cekCmd.Parameters.AddWithValue("@desa", comboBox3.SelectedItem.ToString());
+                        cekCmd.Parameters.AddWithValue("@kecamatan", comboBox2.SelectedItem.ToString());
+                        cekCmd.Parameters.AddWithValue("@kabupaten", comboBox1.SelectedItem.ToString());
+
+                        int count = Convert.ToInt32(cekCmd.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Data kelompok tani dengan Nama, NIK, dan Alamat yang sama sudah terdaftar.", "Duplikasi Terdeteksi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+                    string idBaru = GenerateNewKelompokTaniId();
+                    string insertQuery = "INSERT INTO kelompok_tani (id_kelompoktani, nama_kelompoktani, nik, jumlah_kelompoktani, no_hp_kelompoktani, deskripsi_jalan, id_alamat, is_active) " +
+                                         "VALUES (@id, @nama, @nik, @jumlah, @hp, @jalan, " +
+                                         "(SELECT id_alamat FROM alamat WHERE desa = @desa AND kecamatan = @kecamatan AND kabupaten = @kabupaten), TRUE)";
+
+                    using (var insertCmd = new NpgsqlCommand(insertQuery, conn))
+                    {
+                        insertCmd.Parameters.AddWithValue("@id", idBaru);
+                        insertCmd.Parameters.AddWithValue("@nama", textBox1.Text);
+                        insertCmd.Parameters.AddWithValue("@nik", textBox2.Text);
+                        insertCmd.Parameters.AddWithValue("@jumlah", jumlahKelompokTani);
+                        insertCmd.Parameters.AddWithValue("@hp", textBox4.Text);
+                        insertCmd.Parameters.AddWithValue("@jalan", textBox5.Text);
+                        insertCmd.Parameters.AddWithValue("@desa", comboBox3.SelectedItem.ToString());
+                        insertCmd.Parameters.AddWithValue("@kecamatan", comboBox2.SelectedItem.ToString());
+                        insertCmd.Parameters.AddWithValue("@kabupaten", comboBox1.SelectedItem.ToString());
+
+                        insertCmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("✅ Data berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TampilkanKelompokTani();
+                    KondisiAwal();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Terjadi kesalahan saat menambahkan data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
