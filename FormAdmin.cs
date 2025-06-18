@@ -8,7 +8,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormAdmin : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
         public FormAdmin()
         {
@@ -24,7 +24,7 @@ namespace PROJEK_AKHIR
         {
             try
             {
-                string query = "SELECT id_admin, nama_admin, email, no_hp_admin, username, password FROM admin";
+                string query = "SELECT id_admin, nama_admin, email, no_hp_admin FROM admin";
 
                 using (var conn = new NpgsqlConnection(connectionString))
                 {
@@ -39,8 +39,6 @@ namespace PROJEK_AKHIR
                     dataGridView1.Columns["nama_admin"].HeaderText = "Nama";
                     dataGridView1.Columns["email"].HeaderText = "Email";
                     dataGridView1.Columns["no_hp_admin"].HeaderText = "Nomor Hp";
-                    dataGridView1.Columns["username"].HeaderText = "Username";
-                    dataGridView1.Columns["password"].HeaderText = "Password";
                     dataGridView1.Columns[1].Width = 200;
 
                     conn.Close();

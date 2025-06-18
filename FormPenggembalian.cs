@@ -7,7 +7,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormPenggembalian : Form
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=jodiefer;Database=CANKULLIN";
         private int idPinjamDipilih = -1;
 
         public FormPenggembalian()

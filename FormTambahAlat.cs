@@ -66,7 +66,7 @@ namespace PROJEK_AKHIR
 
         private bool AlatSudahAda(string namaAlat)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
             using (var conn = new Npgsql.NpgsqlConnection(connectionString))
             {
@@ -83,7 +83,7 @@ namespace PROJEK_AKHIR
 
         private void SimpanKeDatabase(string namaAlat, int jumlah, string imagePath)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
             using (var conn = new Npgsql.NpgsqlConnection(connectionString))
             {

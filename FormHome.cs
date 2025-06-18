@@ -23,7 +23,7 @@ namespace PROJEK_AKHIR
                 return;
             }
 
-            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             string query = "SELECT nama_admin FROM admin WHERE id_admin = @id_admin";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))

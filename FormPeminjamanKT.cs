@@ -13,7 +13,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormPeminjamanKT : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
         private BindingList<Alat> alatList = new BindingList<Alat>();
 
         public FormPeminjamanKT()
@@ -78,7 +78,7 @@ namespace PROJEK_AKHIR
 
         private void LoadDataFromDatabase()
         {
-            if (alatList.Count > 0) 
+            if (alatList.Count > 0)
             {
                 return;
             }
@@ -217,16 +217,16 @@ namespace PROJEK_AKHIR
             {
                 conn.Open();
                 string queryPinjam = @"
-            INSERT INTO pinjam (id_kelompoktani, tanggal_pinjam, tenggat_pinjam, id_status, id_admin) 
+            INSERT INTO pinjam (id_kelompoktani, tanggal_pinjam, tenggat_pinjam, id_status, id_admin)
             VALUES (
-                (SELECT id_kelompoktani 
-                 FROM kelompok_tani 
-                 WHERE nama_kelompoktani = @namaKelompokTani 
-                 LIMIT 1), 
-                @tanggalPinjam, 
-                @tenggatPinjam, 
-                (SELECT id_status FROM status WHERE deskripsi = 'Dipinjam'), 
-                @idAdmin) 
+                (SELECT id_kelompoktani
+                 FROM kelompok_tani
+                 WHERE nama_kelompoktani = @namaKelompokTani
+                 LIMIT 1),
+                @tanggalPinjam,
+                @tenggatPinjam,
+                (SELECT id_status FROM status WHERE deskripsi = 'Dipinjam'),
+                @idAdmin)
             RETURNING id_pinjam";
 
                 using (var cmdPinjam = new NpgsqlCommand(queryPinjam, conn))
@@ -301,6 +301,26 @@ namespace PROJEK_AKHIR
                 return;
             }
 
+            DateTime tanggalPinjamDate;
+            if (!DateTime.TryParse(tanggalPinjam, out tanggalPinjamDate))
+            {
+                MessageBox.Show("Format tanggal pinjam tidak valid. Gunakan format YYYY-MM-DD.");
+                return;
+            }
+
+            DateTime tenggatPinjamDate;
+            if (!DateTime.TryParse(tenggatPinjam, out tenggatPinjamDate))
+            {
+                MessageBox.Show("Format tenggat pinjam tidak valid. Gunakan format YYYY-MM-DD.");
+                return;
+            }
+
+            if (tenggatPinjamDate < tanggalPinjamDate)
+            {
+                MessageBox.Show("Tenggat pinjam tidak boleh kurang dari tanggal pinjam.", "Kesalahan Input Tanggal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string loggedInAdminId = UserSession.IdAdminLogin.Trim();
             if (string.IsNullOrEmpty(loggedInAdminId))
             {
@@ -308,7 +328,7 @@ namespace PROJEK_AKHIR
                 return;
             }
 
-            AddPeminjamanToDatabase(namaKelompokTani, namaAlat, jumlah, tanggalPinjam, tenggatPinjam, loggedInAdminId);  // Menggunakan ID admin yang login
+            AddPeminjamanToDatabase(namaKelompokTani, namaAlat, jumlah, tanggalPinjam, tenggatPinjam, loggedInAdminId);
 
             txtKelompokTani.Clear();
             txtNamaAlat.Clear();
