@@ -291,6 +291,13 @@ namespace PROJEK_AKHIR
                 return;
             }
 
+            var selectedAlat = alatList.FirstOrDefault(a => a.Nama == namaAlat);
+            if (selectedAlat != null && jumlah > selectedAlat.Jumlah)
+            {
+                MessageBox.Show($"Jumlah pinjam ({jumlah}) melebihi jumlah alat yang tersedia ({selectedAlat.Jumlah}).", "Kesalahan Jumlah Pinjam", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string tanggalPinjam = txtTanggalPinjam.Text;
             string tenggatPinjam = txtTenggatPinjam.Text;
             string namaKelompokTani = txtKelompokTani.Text;
