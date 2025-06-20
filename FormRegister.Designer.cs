@@ -81,6 +81,7 @@
             this.tbpw.Name = "tbpw";
             this.tbpw.Size = new System.Drawing.Size(199, 13);
             this.tbpw.TabIndex = 17;
+            this.tbpw.TextChanged += new System.EventHandler(this.tbpw_TextChanged);
             // 
             // button1
             // 

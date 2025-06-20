@@ -8,7 +8,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormKelompokTani : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
         public FormKelompokTani()
         {

@@ -32,6 +32,8 @@ namespace PROJEK_AKHIR
                 string nama = tbnama.Text.Trim();
                 string email = tbemail.Text.Trim();
                 string nohp = tbnohp.Text.Trim();
+                string username = tbusername.Text.Trim();
+                string password = tbpw.Text;
 
                 if (string.IsNullOrEmpty(nohp) || !Regex.IsMatch(nohp, @"^\d+$"))
                 {
@@ -39,8 +41,11 @@ namespace PROJEK_AKHIR
                     return;
                 }
 
-                string username = tbusername.Text.Trim();
-                string password = tbpw.Text;
+                if (string.IsNullOrEmpty(password) || password.Length <= 7 || !Regex.IsMatch(password, @"^\d+$"))
+                {
+                    MessageBox.Show("Kata sandi harus lebih dari 8 angka).", "Kesalahan Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 string newAdminId = GenerateNewAdminId();
                 if (string.IsNullOrEmpty(newAdminId))
@@ -71,7 +76,7 @@ namespace PROJEK_AKHIR
 
         private string GetLastAdminId()
         {
-            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             string lastId = null;
 
             string query = "SELECT id_admin FROM admin WHERE id_admin LIKE 'adm%' ORDER BY CAST(SUBSTRING(id_admin FROM 4) AS INT) DESC LIMIT 1";
@@ -125,7 +130,7 @@ namespace PROJEK_AKHIR
 
         private bool Register(string idAdmin, string nama, string email, string nohp, string username, string password)
         {
-            string connStr = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connStr = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
             string query = "INSERT INTO admin (id_admin, nama_admin, email, no_hp_admin, username, password) VALUES (@id_admin, @nama_admin, @email, @no_hp_admin, @username, @password)";
 
@@ -140,7 +145,7 @@ namespace PROJEK_AKHIR
                         cmd.Parameters.AddWithValue("@id_admin", idAdmin);
                         cmd.Parameters.AddWithValue("@nama_admin", nama);
                         cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@no_hp_admin", nohp); 
+                        cmd.Parameters.AddWithValue("@no_hp_admin", nohp);
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
 
@@ -172,6 +177,11 @@ namespace PROJEK_AKHIR
             this.Hide();
             FromLogin formLogin = new FromLogin();
             formLogin.Show();
+        }
+
+        private void tbpw_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

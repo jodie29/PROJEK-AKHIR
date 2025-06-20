@@ -14,7 +14,7 @@ namespace PROJEK_AKHIR
 {
     public partial class FormKelompokTaniEdit : Form
     {
-        string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+        string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
 
         private string originalNama = "";
         private string originalNik = "";

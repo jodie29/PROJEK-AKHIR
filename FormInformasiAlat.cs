@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -22,7 +23,7 @@ namespace PROJEK_AKHIR
 
         private void LoadDataFromDatabase()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
@@ -54,7 +55,7 @@ namespace PROJEK_AKHIR
 
         private void SoftDeleteAlatFromDatabase(Alat alat)
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=Rfqh0_;Database=CANKULLIN";
+            string connectionString = "Host=localhost;Username=postgres;Password=jodiefer;Database=CANKULLIN";
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
@@ -136,6 +137,17 @@ namespace PROJEK_AKHIR
 
         public void TambahAlat(string namaAlat, int jumlah, string imagePath)
         {
+            Alat existingAlat = alatList.FirstOrDefault(a => a.Nama == namaAlat);
+
+            if (existingAlat != null)
+            {
+                if (jumlah > existingAlat.Jumlah)
+                {
+                    MessageBox.Show("Jumlah alat melebihi jumlah yang tersedia.");
+                    return;
+                }
+            }
+
             Alat alatBaru = new Alat
             {
                 Nama = namaAlat,
