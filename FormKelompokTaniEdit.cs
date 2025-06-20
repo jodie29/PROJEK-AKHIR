@@ -350,6 +350,8 @@ namespace PROJEK_AKHIR
 
             try
             {
+                dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
+
                 int selectedRowIndex = dataGridView1.CurrentRow.Index;
 
                 using (var conn = new NpgsqlConnection(connectionString))
@@ -376,6 +378,7 @@ namespace PROJEK_AKHIR
                         if (count > 0)
                         {
                             MessageBox.Show("Perubahan ini menghasilkan duplikasi dengan data yang sudah ada.", "Duplikasi Terdeteksi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
                             return;
                         }
                     }
@@ -408,17 +411,17 @@ namespace PROJEK_AKHIR
                 MessageBox.Show("Data berhasil diubah!");
                 TampilkanKelompokTani();
 
-                if (dataGridView1.Rows.Count > selectedRowIndex)
-                {
-                    dataGridView1.CurrentCell = dataGridView1.Rows[selectedRowIndex].Cells[0];
-                    dataGridView1.Rows[selectedRowIndex].Selected = true;
-                }
+                dataGridView1.ClearSelection();
 
                 KondisiAwal();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Terjadi kesalahan saat mengubah data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             }
         }
 
